@@ -43,6 +43,12 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
+            this.lbNombre = new System.Windows.Forms.Label();
+            this.lbNaturaleza = new System.Windows.Forms.Label();
+            this.lbTipo = new System.Windows.Forms.Label();
+            this.lbPeso = new System.Windows.Forms.Label();
+            this.lbAltura = new System.Windows.Forms.Label();
             this.groupBoxImagen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBoxDatos.SuspendLayout();
@@ -66,9 +72,9 @@
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Gold;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Location = new System.Drawing.Point(69, 121);
+            this.btnEditar.Location = new System.Drawing.Point(63, 121);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(81, 23);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -77,11 +83,11 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.ImageLocation = "images/1.png";
             this.pictureBox1.Location = new System.Drawing.Point(3, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(144, 102);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -89,6 +95,12 @@
             // groupBoxDatos
             // 
             this.groupBoxDatos.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBoxDatos.Controls.Add(this.lbAltura);
+            this.groupBoxDatos.Controls.Add(this.lbPeso);
+            this.groupBoxDatos.Controls.Add(this.lbTipo);
+            this.groupBoxDatos.Controls.Add(this.lbNaturaleza);
+            this.groupBoxDatos.Controls.Add(this.lbNombre);
+            this.groupBoxDatos.Controls.Add(this.lbID);
             this.groupBoxDatos.Controls.Add(this.label6);
             this.groupBoxDatos.Controls.Add(this.label5);
             this.groupBoxDatos.Controls.Add(this.label4);
@@ -106,54 +118,60 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(6, 157);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Altura";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(6, 132);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
+            this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Peso";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tipo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Naturaleza";
+            this.label3.Text = "Clase";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.Size = new System.Drawing.Size(20, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
@@ -201,7 +219,7 @@
             "6.-Charizard"});
             this.listBox1.Location = new System.Drawing.Point(6, 19);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(145, 273);
+            this.listBox1.Size = new System.Drawing.Size(145, 286);
             this.listBox1.TabIndex = 0;
             this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -230,6 +248,60 @@
             this.label7.Size = new System.Drawing.Size(85, 13);
             this.label7.TabIndex = 8;
             this.label7.Text = "Pokedex v0.1";
+            // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(71, 27);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(13, 13);
+            this.lbID.TabIndex = 6;
+            this.lbID.Text = "1";
+            // 
+            // lbNombre
+            // 
+            this.lbNombre.AutoSize = true;
+            this.lbNombre.Location = new System.Drawing.Point(71, 53);
+            this.lbNombre.Name = "lbNombre";
+            this.lbNombre.Size = new System.Drawing.Size(54, 13);
+            this.lbNombre.TabIndex = 7;
+            this.lbNombre.Text = "Bulbasaur";
+            // 
+            // lbNaturaleza
+            // 
+            this.lbNaturaleza.AutoSize = true;
+            this.lbNaturaleza.Location = new System.Drawing.Point(71, 79);
+            this.lbNaturaleza.Name = "lbNaturaleza";
+            this.lbNaturaleza.Size = new System.Drawing.Size(40, 13);
+            this.lbNaturaleza.TabIndex = 8;
+            this.lbNaturaleza.Text = "Semilla";
+            // 
+            // lbTipo
+            // 
+            this.lbTipo.AutoSize = true;
+            this.lbTipo.Location = new System.Drawing.Point(71, 106);
+            this.lbTipo.Name = "lbTipo";
+            this.lbTipo.Size = new System.Drawing.Size(37, 13);
+            this.lbTipo.TabIndex = 9;
+            this.lbTipo.Text = "Planta";
+            // 
+            // lbPeso
+            // 
+            this.lbPeso.AutoSize = true;
+            this.lbPeso.Location = new System.Drawing.Point(71, 132);
+            this.lbPeso.Name = "lbPeso";
+            this.lbPeso.Size = new System.Drawing.Size(22, 13);
+            this.lbPeso.TabIndex = 10;
+            this.lbPeso.Text = "6.9";
+            // 
+            // lbAltura
+            // 
+            this.lbAltura.AutoSize = true;
+            this.lbAltura.Location = new System.Drawing.Point(71, 157);
+            this.lbAltura.Name = "lbAltura";
+            this.lbAltura.Size = new System.Drawing.Size(28, 13);
+            this.lbAltura.TabIndex = 11;
+            this.lbAltura.Text = "0.71";
             // 
             // Principal
             // 
@@ -273,5 +345,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbAltura;
+        private System.Windows.Forms.Label lbPeso;
+        private System.Windows.Forms.Label lbTipo;
+        private System.Windows.Forms.Label lbNaturaleza;
+        private System.Windows.Forms.Label lbNombre;
+        private System.Windows.Forms.Label lbID;
     }
 }

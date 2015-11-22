@@ -20,7 +20,7 @@ namespace Pokemon
             InitializeComponent();            
             padre = p;
             db.IniciarConexion("pokedex.accdb");
-            sql = "SELECT nombre FROM pokedex3";
+            sql = "SELECT id,nombre FROM pokedex3";
             db.consultar(sql,listBox1);
         }
 
@@ -45,8 +45,48 @@ namespace Pokemon
         {
             if (this.Visible)
             {
-                sql = "SELECT Imagen FROM pokedex3 WHERE Nombre = '" + listBox1.Text + "'";
-                pictureBox1.ImageLocation = db.consultaStr(sql); ;
+                sql = "SELECT id FROM pokedex3 WHERE id = " + listBox1.Text.Substring(0, 3) + "";
+                lbID.Text = db.consultaStr(sql);
+                sql = "SELECT Imagen FROM pokedex3 WHERE id = " + listBox1.Text.Substring(0,3) + "";
+                pictureBox1.ImageLocation = db.consultaStr(sql); 
+                sql = "SELECT nombre FROM pokedex3 WHERE id = "+listBox1.Text.Substring(0,3)+"";
+                lbNombre.Text = db.consultaStr(sql);
+                sql = "SELECT peso FROM pokedex3 WHERE id = "+ listBox1.Text.Substring(0, 3)+"";
+                try
+                {
+                    lbPeso.Text = db.consultaStr(sql);
+                }
+                catch (Exception)
+                {
+                    lbPeso.Text = "";
+                }
+                sql = "SELECT altura FROM pokedex3 WHERE id = " + listBox1.Text.Substring(0, 3) + "";
+                try
+                {
+                    lbAltura.Text = db.consultaStr(sql);
+                }
+                catch (Exception)
+                {
+                    lbAltura.Text = "";
+                }
+                sql = "SELECT tipo1 FROM pokedex3 WHERE id = " + listBox1.Text.Substring(0, 3) + "";
+                try
+                {
+                    lbTipo.Text = db.consultaStr(sql);
+                }
+                catch (Exception)
+                {
+                    lbTipo.Text = "";
+                }
+                sql = "SELECT clase FROM pokedex3 WHERE id = " + listBox1.Text.Substring(0, 3) + "";
+                try
+                {
+                    lbNaturaleza.Text = db.consultaStr(sql).Substring(8);
+                }
+                catch (Exception)
+                {
+                    lbNaturaleza.Text = "";
+                }
             }
         }
 
