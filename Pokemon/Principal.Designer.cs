@@ -57,7 +57,7 @@
             this.groupBoxImagen.ForeColor = System.Drawing.SystemColors.Window;
             this.groupBoxImagen.Location = new System.Drawing.Point(12, 36);
             this.groupBoxImagen.Name = "groupBoxImagen";
-            this.groupBoxImagen.Size = new System.Drawing.Size(250, 250);
+            this.groupBoxImagen.Size = new System.Drawing.Size(150, 150);
             this.groupBoxImagen.TabIndex = 0;
             this.groupBoxImagen.TabStop = false;
             this.groupBoxImagen.Text = "Imagen";
@@ -66,12 +66,13 @@
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Gold;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Location = new System.Drawing.Point(169, 221);
+            this.btnEditar.Location = new System.Drawing.Point(69, 121);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // pictureBox1
             // 
@@ -80,7 +81,7 @@
             this.pictureBox1.ImageLocation = "images/1.png";
             this.pictureBox1.Location = new System.Drawing.Point(3, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(244, 231);
+            this.pictureBox1.Size = new System.Drawing.Size(144, 131);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -95,9 +96,9 @@
             this.groupBoxDatos.Controls.Add(this.label2);
             this.groupBoxDatos.Controls.Add(this.label1);
             this.groupBoxDatos.ForeColor = System.Drawing.SystemColors.Window;
-            this.groupBoxDatos.Location = new System.Drawing.Point(12, 292);
+            this.groupBoxDatos.Location = new System.Drawing.Point(12, 192);
             this.groupBoxDatos.Name = "groupBoxDatos";
-            this.groupBoxDatos.Size = new System.Drawing.Size(250, 186);
+            this.groupBoxDatos.Size = new System.Drawing.Size(150, 186);
             this.groupBoxDatos.TabIndex = 1;
             this.groupBoxDatos.TabStop = false;
             this.groupBoxDatos.Text = "Datos";
@@ -163,9 +164,9 @@
             this.groupBoxLista.Controls.Add(this.listBox1);
             this.groupBoxLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBoxLista.ForeColor = System.Drawing.Color.White;
-            this.groupBoxLista.Location = new System.Drawing.Point(268, 36);
+            this.groupBoxLista.Location = new System.Drawing.Point(169, 36);
             this.groupBoxLista.Name = "groupBoxLista";
-            this.groupBoxLista.Size = new System.Drawing.Size(157, 442);
+            this.groupBoxLista.Size = new System.Drawing.Size(157, 342);
             this.groupBoxLista.TabIndex = 2;
             this.groupBoxLista.TabStop = false;
             this.groupBoxLista.Text = "Lista";
@@ -174,12 +175,13 @@
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.LimeGreen;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Location = new System.Drawing.Point(7, 410);
+            this.btnRegistrar.Location = new System.Drawing.Point(7, 308);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(144, 23);
             this.btnRegistrar.TabIndex = 1;
             this.btnRegistrar.Text = "Registrar nuevo pokemon";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // listBox1
             // 
@@ -199,8 +201,10 @@
             "6.-Charizard"});
             this.listBox1.Location = new System.Drawing.Point(6, 19);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(145, 377);
+            this.listBox1.Size = new System.Drawing.Size(145, 273);
             this.listBox1.TabIndex = 0;
+            this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btnSalir
             // 
@@ -208,7 +212,7 @@
             this.btnSalir.BackColor = System.Drawing.Color.Snow;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btnSalir.Location = new System.Drawing.Point(410, 1);
+            this.btnSalir.Location = new System.Drawing.Point(313, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(27, 23);
             this.btnSalir.TabIndex = 7;
@@ -232,7 +236,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OrangeRed;
-            this.ClientSize = new System.Drawing.Size(438, 490);
+            this.ClientSize = new System.Drawing.Size(340, 392);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBoxLista);
