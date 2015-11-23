@@ -20,8 +20,8 @@ namespace Pokemon
             InitializeComponent();            
             padre = p;
             db.IniciarConexion("pokedex.accdb");
-            sql = "SELECT id,nombre FROM pokedex3";
-            db.consultar(sql,listBox1);
+            sql = "SELECT id,nombre FROM pokedex";
+            db.consultar(sql, listBox1);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -45,13 +45,13 @@ namespace Pokemon
         {
             if (this.Visible)
             {
-                sql = "SELECT id FROM pokedex3 WHERE id = " + listBox1.Text.Substring(0, 3) + "";
+                sql = "SELECT id FROM pokedex WHERE id = " + listBox1.Text.Substring(0, 3) + "";
                 lbID.Text = db.consultaStr(sql);
-                sql = "SELECT Imagen FROM pokedex3 WHERE id = " + listBox1.Text.Substring(0,3) + "";
+                sql = "SELECT Imagen FROM pokedex WHERE id = " + listBox1.Text.Substring(0,3) + "";
                 pictureBox1.ImageLocation = db.consultaStr(sql); 
-                sql = "SELECT nombre FROM pokedex3 WHERE id = "+listBox1.Text.Substring(0,3)+"";
+                sql = "SELECT nombre FROM pokedex WHERE id = "+listBox1.Text.Substring(0,3)+"";
                 lbNombre.Text = db.consultaStr(sql);
-                sql = "SELECT peso FROM pokedex3 WHERE id = "+ listBox1.Text.Substring(0, 3)+"";
+                sql = "SELECT peso FROM pokedex WHERE id = "+ listBox1.Text.Substring(0, 3)+"";
                 try
                 {
                     lbPeso.Text = db.consultaStr(sql);
@@ -60,7 +60,7 @@ namespace Pokemon
                 {
                     lbPeso.Text = "";
                 }
-                sql = "SELECT altura FROM pokedex3 WHERE id = " + listBox1.Text.Substring(0, 3) + "";
+                sql = "SELECT altura FROM pokedex WHERE id = " + listBox1.Text.Substring(0, 3) + "";
                 try
                 {
                     lbAltura.Text = db.consultaStr(sql);
@@ -69,7 +69,7 @@ namespace Pokemon
                 {
                     lbAltura.Text = "";
                 }
-                sql = "SELECT tipo1 FROM pokedex3 WHERE id = " + listBox1.Text.Substring(0, 3) + "";
+                sql = "SELECT tipo1 FROM pokedex WHERE id = " + listBox1.Text.Substring(0, 3) + "";
                 try
                 {
                     lbTipo.Text = db.consultaStr(sql);
@@ -78,10 +78,10 @@ namespace Pokemon
                 {
                     lbTipo.Text = "";
                 }
-                sql = "SELECT clase FROM pokedex3 WHERE id = " + listBox1.Text.Substring(0, 3) + "";
+                sql = "SELECT clase FROM pokedex WHERE id = " + listBox1.Text.Substring(0, 3) + "";
                 try
                 {
-                    lbNaturaleza.Text = db.consultaStr(sql).Substring(8);
+                    lbNaturaleza.Text = db.consultaStr(sql);
                 }
                 catch (Exception)
                 {

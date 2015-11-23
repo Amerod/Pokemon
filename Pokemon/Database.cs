@@ -46,22 +46,19 @@ namespace Pokemon
             Adapter.Fill(dataSet,"pokimon");
             List<string> pokemons = new List<string>();
             
-            foreach (DataRow tabla in dataSet.Tables["pokimon"].Rows)
+            foreach (DataRow fila in dataSet.Tables["pokimon"].Rows)
             {
-                String nuevo = String.Format("{0,3} - {1}", tabla["id"], tabla["nombre"]);
+                String nuevo = String.Format("{0,3} - {1}", fila["id"], fila["nombre"]);
                 pokemons.Add(nuevo);
             }
-            //listbox.DataSource = dataSet.Tables["pokimon"].DefaultView;
-            //listbox.DisplayMember = "id,nombre";
-            //listbox.DisplayMember = "nombre";
             listbox.DataSource = pokemons;
         }
         public String consultaStr(string sql)
         {
             Adapter = new OleDbDataAdapter(sql, Conexion);
             DataSet dataSet = new DataSet();
-            Adapter.Fill(dataSet, "pokedex3");
-            return dataSet.Tables["pokedex3"].Rows[0][0].ToString();
+            Adapter.Fill(dataSet, "pokedex");
+            return dataSet.Tables["pokedex"].Rows[0][0].ToString();
         }
     }
 }
