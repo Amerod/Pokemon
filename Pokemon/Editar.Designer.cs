@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -36,27 +36,27 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtClase = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
+            this.txtPeso = new System.Windows.Forms.TextBox();
+            this.txtAltura = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(80, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "#1 Bulbasaur";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTitulo.Location = new System.Drawing.Point(80, 25);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(131, 24);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "#1 Bulbasaur";
             // 
             // label6
             // 
@@ -94,9 +94,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(12, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Naturaleza";
+            this.label3.Text = "Clase";
             // 
             // label2
             // 
@@ -132,48 +132,48 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(111, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 20);
-            this.textBox1.TabIndex = 13;
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(111, 61);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(158, 20);
+            this.txtID.TabIndex = 13;
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(111, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 20);
-            this.textBox2.TabIndex = 14;
+            this.txtNombre.Location = new System.Drawing.Point(111, 87);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(158, 20);
+            this.txtNombre.TabIndex = 14;
             // 
-            // textBox3
+            // txtClase
             // 
-            this.textBox3.Location = new System.Drawing.Point(111, 113);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 20);
-            this.textBox3.TabIndex = 15;
+            this.txtClase.Location = new System.Drawing.Point(111, 113);
+            this.txtClase.Name = "txtClase";
+            this.txtClase.Size = new System.Drawing.Size(158, 20);
+            this.txtClase.TabIndex = 15;
             // 
-            // textBox4
+            // txtTipo
             // 
-            this.textBox4.Location = new System.Drawing.Point(111, 139);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(158, 20);
-            this.textBox4.TabIndex = 16;
+            this.txtTipo.Location = new System.Drawing.Point(111, 139);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(158, 20);
+            this.txtTipo.TabIndex = 16;
             // 
-            // textBox5
+            // txtPeso
             // 
-            this.textBox5.Location = new System.Drawing.Point(111, 165);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(158, 20);
-            this.textBox5.TabIndex = 17;
+            this.txtPeso.Location = new System.Drawing.Point(111, 165);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(158, 20);
+            this.txtPeso.TabIndex = 17;
             // 
-            // textBox6
+            // txtAltura
             // 
-            this.textBox6.Location = new System.Drawing.Point(111, 191);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(158, 20);
-            this.textBox6.TabIndex = 18;
+            this.txtAltura.Location = new System.Drawing.Point(111, 191);
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.Size = new System.Drawing.Size(158, 20);
+            this.txtAltura.TabIndex = 18;
             // 
             // btnGuardar
             // 
@@ -186,6 +186,7 @@
             this.btnGuardar.TabIndex = 19;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBorrar
             // 
@@ -219,12 +220,12 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAltura);
+            this.Controls.Add(this.txtPeso);
+            this.Controls.Add(this.txtTipo);
+            this.Controls.Add(this.txtClase);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -232,7 +233,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Editar";
             this.Text = "Editar";
@@ -243,7 +244,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -251,12 +252,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtClase;
+        private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label label8;

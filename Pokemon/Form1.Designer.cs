@@ -45,9 +45,9 @@
             this.label1.ForeColor = System.Drawing.Color.Snow;
             this.label1.Location = new System.Drawing.Point(19, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 80);
+            this.label1.Size = new System.Drawing.Size(257, 80);
             this.label1.TabIndex = 0;
-            this.label1.Text = "POKIMON";
+            this.label1.Text = "Pokedex";
             // 
             // label2
             // 

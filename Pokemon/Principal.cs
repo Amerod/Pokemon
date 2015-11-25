@@ -20,6 +20,9 @@ namespace Pokemon
             InitializeComponent();            
             padre = p;
             db.IniciarConexion("pokedex.accdb");
+            cargarPkmn();
+        }
+        public void cargarPkmn() {
             sql = "SELECT id,nombre FROM pokedex";
             db.consultar(sql, listBox1);
         }
@@ -31,8 +34,9 @@ namespace Pokemon
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Form editar = new Editar();
+            Form editar = new Editar(listBox1.Text.Substring(0,3),this);
             editar.Visible = true;
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -91,6 +95,11 @@ namespace Pokemon
         }
 
         private void listBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
         {
 
         }
