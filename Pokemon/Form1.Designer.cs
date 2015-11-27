@@ -74,6 +74,8 @@
             this.txtContrasena.Size = new System.Drawing.Size(167, 20);
             this.txtContrasena.TabIndex = 4;
             this.txtContrasena.UseSystemPasswordChar = true;
+            this.txtContrasena.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContrasena_KeyDown);
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             // 
             // label3
             // 

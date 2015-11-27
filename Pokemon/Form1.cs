@@ -45,5 +45,17 @@ namespace Pokemon
             Registro registro = new Registro();
             registro.Visible = true;
         }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void txtContrasena_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                btnEntrar_Click(sender, e);
+            }
+        }
     }
 }

@@ -21,5 +21,10 @@ namespace Pokemon
         {
             this.Dispose();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
