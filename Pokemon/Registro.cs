@@ -29,6 +29,7 @@ namespace Pokemon
                 if (i > 0)
                 {
                     MessageBox.Show("Registrado con exito.");
+                    this.Dispose();
                 }
                 else {
                     MessageBox.Show("No se pudo registrar.");

@@ -322,7 +322,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 13);
             this.label7.TabIndex = 8;
-            this.label7.Text = "Pokedex v0.2";
+            this.label7.Text = "Pokedex v0.5";
             // 
             // Principal
             // 
@@ -339,6 +339,7 @@
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.groupBoxImagen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBoxDatos.ResumeLayout(false);

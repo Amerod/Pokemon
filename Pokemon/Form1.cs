@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace Pokemon
 
-    //Cambio
 {
     public partial class Form1 : Form
     {
