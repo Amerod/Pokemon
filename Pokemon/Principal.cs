@@ -41,7 +41,7 @@ namespace Pokemon
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Form nuevo = new Nuevo();
+            Form nuevo = new Nuevo(listBox1.Text.Substring(0, 3), this);
             nuevo.Visible = true;
         }
 

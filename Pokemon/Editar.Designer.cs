@@ -199,6 +199,7 @@
             this.btnBorrar.TabIndex = 20;
             this.btnBorrar.Text = "Borrar Registro";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // label8
             // 

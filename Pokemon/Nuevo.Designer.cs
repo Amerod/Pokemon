@@ -36,17 +36,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtClase = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
+            this.txtPeso = new System.Windows.Forms.TextBox();
+            this.txtAltura = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnImg = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -134,48 +134,49 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "ID";
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(109, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 20;
+            this.txtID.AcceptsReturn = true;
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(109, 64);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(146, 20);
+            this.txtID.TabIndex = 20;
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 20);
-            this.textBox2.TabIndex = 21;
+            this.txtNombre.Location = new System.Drawing.Point(109, 90);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(146, 20);
+            this.txtNombre.TabIndex = 21;
             // 
-            // textBox3
+            // txtClase
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 116);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(146, 20);
-            this.textBox3.TabIndex = 22;
+            this.txtClase.Location = new System.Drawing.Point(109, 116);
+            this.txtClase.Name = "txtClase";
+            this.txtClase.Size = new System.Drawing.Size(146, 20);
+            this.txtClase.TabIndex = 22;
             // 
-            // textBox4
+            // txtTipo
             // 
-            this.textBox4.Location = new System.Drawing.Point(109, 143);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(146, 20);
-            this.textBox4.TabIndex = 23;
+            this.txtTipo.Location = new System.Drawing.Point(109, 143);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(146, 20);
+            this.txtTipo.TabIndex = 23;
             // 
-            // textBox5
+            // txtPeso
             // 
-            this.textBox5.Location = new System.Drawing.Point(109, 169);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(146, 20);
-            this.textBox5.TabIndex = 24;
+            this.txtPeso.Location = new System.Drawing.Point(109, 169);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(146, 20);
+            this.txtPeso.TabIndex = 24;
             // 
-            // textBox6
+            // txtAltura
             // 
-            this.textBox6.Location = new System.Drawing.Point(109, 195);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(146, 20);
-            this.textBox6.TabIndex = 25;
+            this.txtAltura.Location = new System.Drawing.Point(109, 195);
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.Size = new System.Drawing.Size(146, 20);
+            this.txtAltura.TabIndex = 25;
             // 
             // btnGuardar
             // 
@@ -188,6 +189,7 @@
             this.btnGuardar.TabIndex = 26;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label8
             // 
@@ -214,17 +216,17 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button1
+            // btnImg
             // 
-            this.button1.BackColor = System.Drawing.Color.Snow;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(109, 219);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Abrir archivo...";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnImg.BackColor = System.Drawing.Color.Snow;
+            this.btnImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImg.Location = new System.Drawing.Point(109, 219);
+            this.btnImg.Name = "btnImg";
+            this.btnImg.Size = new System.Drawing.Size(146, 23);
+            this.btnImg.TabIndex = 29;
+            this.btnImg.Text = "Abrir archivo...";
+            this.btnImg.UseVisualStyleBackColor = false;
+            this.btnImg.Click += new System.EventHandler(this.button1_Click);
             // 
             // Nuevo
             // 
@@ -232,16 +234,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OrangeRed;
             this.ClientSize = new System.Drawing.Size(276, 301);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnImg);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAltura);
+            this.Controls.Add(this.txtPeso);
+            this.Controls.Add(this.txtTipo);
+            this.Controls.Add(this.txtClase);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -268,16 +270,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtClase;
+        private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnImg;
     }
 }
