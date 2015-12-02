@@ -74,16 +74,20 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.Gold;
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(94, 121);
+            this.btnEditar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEditar.Location = new System.Drawing.Point(127, 124);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(50, 23);
+            this.btnEditar.Size = new System.Drawing.Size(20, 20);
             this.btnEditar.TabIndex = 1;
-            this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnEditar.MouseEnter += new System.EventHandler(this.btnEditar_MouseEnter);
             // 
             // pictureBox1
             // 
@@ -282,8 +286,7 @@
             this.listBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ForeColor = System.Drawing.Color.Transparent;
             this.listBox1.Items.AddRange(new object[] {
             "1.-Bulbasaur",
             "2.-Venosaur",
@@ -322,7 +325,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 13);
             this.label7.TabIndex = 8;
-            this.label7.Text = "Pokedex v0.3";
+            this.label7.Text = "Pokedex v0.4";
             // 
             // Principal
             // 

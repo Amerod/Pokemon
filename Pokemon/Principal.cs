@@ -103,5 +103,11 @@ namespace Pokemon
         {
 
         }
+
+        private void btnEditar_MouseEnter(object sender, EventArgs e)
+        {
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.Transparent;
+        }
     }
 }
