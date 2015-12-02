@@ -92,6 +92,7 @@
             // 
             this.btnEntrar.BackColor = System.Drawing.Color.LimeGreen;
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.SystemColors.Window;
             this.btnEntrar.Location = new System.Drawing.Point(201, 187);
             this.btnEntrar.Name = "btnEntrar";
@@ -118,6 +119,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(20, 187);
             this.button1.Name = "button1";
