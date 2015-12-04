@@ -59,11 +59,20 @@ namespace Pokemon
             int res;
             if ((txtNombre.Text != "") && (txtClase.Text != "") && (txtTipo.Text != "") && (txtPeso.Text != "") && (txtAltura.Text != ""))
             {
-                sql = "UPDATE pokedex SET nombre='" + txtNombre.Text + "', tipo1='" + txtTipo.Text + "',clase='" + txtClase.Text + "',altura='" + txtAltura.Text + "',peso='" + txtPeso.Text + "' WHERE id = " + id;
-                res = db.ejecutar_slq(sql);
-                if (res == -1) MessageBox.Show("El cambio de nombre ha fallado.");
-                padre.cargarPkmn();
-                this.Dispose();
+                try
+                {
+                    Double.Parse(txtPeso.Text);
+                    Double.Parse(txtAltura.Text);
+                    sql = "UPDATE pokedex SET nombre='" + txtNombre.Text + "', tipo1='" + txtTipo.Text + "',clase='" + txtClase.Text + "',altura='" + txtAltura.Text + "',peso='" + txtPeso.Text + "' WHERE id = " + id;
+                    res = db.ejecutar_slq(sql);
+                    if (res == -1) MessageBox.Show("El cambio de nombre ha fallado.");
+                    padre.cargarPkmn();
+                    this.Dispose();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Valor incorrecto en Peso o Altura.");
+                }
 
 
             }

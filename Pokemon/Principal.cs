@@ -83,6 +83,15 @@ namespace Pokemon
                 {
                     lbTipo_v.Text = "";
                 }
+                sql = "SELECT tipo2 FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
+                try
+                {
+                    lblTipo2.Text = db.consultaStr(sql);
+                }
+                catch (Exception)
+                {
+                    lbTipo_v.Text = "";
+                }
                 sql = "SELECT clase FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
                 {
