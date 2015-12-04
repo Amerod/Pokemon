@@ -107,13 +107,18 @@ namespace Pokemon
 
         private void btnEditar_MouseEnter(object sender, EventArgs e)
         {
-            btnEditar.UseVisualStyleBackColor = false;
-            btnEditar.BackColor = Color.Transparent;
+
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bt(object sender, EventArgs e)
+        {
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.Transparent;
         }
     }
 }

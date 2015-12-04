@@ -310,9 +310,10 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(20, 20);
             this.btnEditar.TabIndex = 1;
-            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             this.btnEditar.MouseEnter += new System.EventHandler(this.btnEditar_MouseEnter);
+            this.btnEditar.MouseHover += new System.EventHandler(this.bt);
             // 
             // picBxPkmns
             // 
@@ -362,7 +363,6 @@
         private System.Windows.Forms.ListBox lstBxPkmns;
         private System.Windows.Forms.PictureBox picBxPkmns;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label lblAltura;
         private System.Windows.Forms.Label lblPeso;
         private System.Windows.Forms.Label lblTipo;
@@ -377,5 +377,6 @@
         private System.Windows.Forms.Label lbNaturaleza_v;
         private System.Windows.Forms.Label lbNombre_v;
         private System.Windows.Forms.Label lbID_v;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
