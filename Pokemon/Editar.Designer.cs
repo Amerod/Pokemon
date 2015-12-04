@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblAltura = new System.Windows.Forms.Label();
+            this.lblPeso = new System.Windows.Forms.Label();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.lblClase = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -44,7 +44,6 @@
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -58,65 +57,65 @@
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "#1 Bulbasaur";
             // 
-            // label6
+            // lblAltura
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(12, 194);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Altura";
+            this.lblAltura.AutoSize = true;
+            this.lblAltura.ForeColor = System.Drawing.Color.White;
+            this.lblAltura.Location = new System.Drawing.Point(12, 194);
+            this.lblAltura.Name = "lblAltura";
+            this.lblAltura.Size = new System.Drawing.Size(34, 13);
+            this.lblAltura.TabIndex = 11;
+            this.lblAltura.Text = "Altura";
             // 
-            // label5
+            // lblPeso
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(12, 169);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Peso";
+            this.lblPeso.AutoSize = true;
+            this.lblPeso.ForeColor = System.Drawing.Color.White;
+            this.lblPeso.Location = new System.Drawing.Point(12, 169);
+            this.lblPeso.Name = "lblPeso";
+            this.lblPeso.Size = new System.Drawing.Size(31, 13);
+            this.lblPeso.TabIndex = 10;
+            this.lblPeso.Text = "Peso";
             // 
-            // label4
+            // lblTipo
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Tipo";
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.ForeColor = System.Drawing.Color.White;
+            this.lblTipo.Location = new System.Drawing.Point(12, 143);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(28, 13);
+            this.lblTipo.TabIndex = 9;
+            this.lblTipo.Text = "Tipo";
             // 
-            // label3
+            // lblClase
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Clase";
+            this.lblClase.AutoSize = true;
+            this.lblClase.ForeColor = System.Drawing.Color.White;
+            this.lblClase.Location = new System.Drawing.Point(12, 116);
+            this.lblClase.Name = "lblClase";
+            this.lblClase.Size = new System.Drawing.Size(33, 13);
+            this.lblClase.TabIndex = 8;
+            this.lblClase.Text = "Clase";
             // 
-            // label2
+            // lblNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Nombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(12, 90);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 7;
+            this.lblNombre.Text = "Nombre";
             // 
-            // label7
+            // lblID
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(12, 64);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(18, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "ID";
+            this.lblID.AutoSize = true;
+            this.lblID.ForeColor = System.Drawing.Color.White;
+            this.lblID.Location = new System.Drawing.Point(12, 64);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.TabIndex = 6;
+            this.lblID.Text = "ID";
             // 
             // btnSalir
             // 
@@ -177,7 +176,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(187)))), ((int)(((byte)(40)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(194, 234);
@@ -201,24 +200,12 @@
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label8.Location = new System.Drawing.Point(12, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Editar";
-            // 
             // Editar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.OrangeRed;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(297, 279);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtAltura);
@@ -228,12 +215,12 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblAltura);
+            this.Controls.Add(this.lblPeso);
+            this.Controls.Add(this.lblTipo);
+            this.Controls.Add(this.lblClase);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Editar";
@@ -246,12 +233,12 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblAltura;
+        private System.Windows.Forms.Label lblPeso;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.Label lblClase;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtNombre;
@@ -261,6 +248,5 @@
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.Label label8;
     }
 }

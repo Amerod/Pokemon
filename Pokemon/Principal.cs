@@ -21,11 +21,11 @@ namespace Pokemon
             padre = p;
             db.IniciarConexion("pokedex.accdb");
             cargarPkmn();
-            listBox1.SelectedIndex = 0;
+            lstBxPkmns.SelectedIndex = 0;
         }
         public void cargarPkmn() {
             sql = "SELECT id,nombre FROM pokedex";
-            db.consultar(sql, listBox1);
+            db.consultar(sql, lstBxPkmns);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -35,14 +35,14 @@ namespace Pokemon
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Form editar = new Editar(listBox1.Text.Substring(0,3),this);
+            Form editar = new Editar(lstBxPkmns.Text.Substring(0,3),this);
             editar.Visible = true;
 
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Form nuevo = new Nuevo(listBox1.Text.Substring(0, 3), this);
+            Form nuevo = new Nuevo(lstBxPkmns.Text.Substring(0, 3), this);
             nuevo.Visible = true;
         }
 
@@ -50,47 +50,47 @@ namespace Pokemon
         {
             if (this.Visible)
             {
-                sql = "SELECT id FROM pokedex WHERE id = " + listBox1.Text.Substring(0, 3) + "";
-                lbID.Text = db.consultaStr(sql);
-                sql = "SELECT Imagen FROM pokedex WHERE id = " + listBox1.Text.Substring(0,3) + "";
-                pictureBox1.ImageLocation = db.consultaStr(sql); 
-                sql = "SELECT nombre FROM pokedex WHERE id = "+listBox1.Text.Substring(0,3)+"";
-                lbNombre.Text = db.consultaStr(sql);
-                sql = "SELECT peso FROM pokedex WHERE id = "+ listBox1.Text.Substring(0, 3)+"";
+                sql = "SELECT id FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
+                lbID_v.Text = db.consultaStr(sql);
+                sql = "SELECT Imagen FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0,3) + "";
+                picBxPkmns.ImageLocation = db.consultaStr(sql); 
+                sql = "SELECT nombre FROM pokedex WHERE id = "+lstBxPkmns.Text.Substring(0,3)+"";
+                lbNombre_v.Text = db.consultaStr(sql);
+                sql = "SELECT peso FROM pokedex WHERE id = "+ lstBxPkmns.Text.Substring(0, 3)+"";
                 try
                 {
-                    lbPeso.Text = db.consultaStr(sql);
+                    lbPeso_v.Text = db.consultaStr(sql);
                 }
                 catch (Exception)
                 {
-                    lbPeso.Text = "";
+                    lbPeso_v.Text = "";
                 }
-                sql = "SELECT altura FROM pokedex WHERE id = " + listBox1.Text.Substring(0, 3) + "";
+                sql = "SELECT altura FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
                 {
-                    lbAltura.Text = db.consultaStr(sql);
+                    lbAltura_v.Text = db.consultaStr(sql);
                 }
                 catch (Exception)
                 {
-                    lbAltura.Text = "";
+                    lbAltura_v.Text = "";
                 }
-                sql = "SELECT tipo1 FROM pokedex WHERE id = " + listBox1.Text.Substring(0, 3) + "";
+                sql = "SELECT tipo1 FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
                 {
-                    lbTipo.Text = db.consultaStr(sql);
+                    lbTipo_v.Text = db.consultaStr(sql);
                 }
                 catch (Exception)
                 {
-                    lbTipo.Text = "";
+                    lbTipo_v.Text = "";
                 }
-                sql = "SELECT clase FROM pokedex WHERE id = " + listBox1.Text.Substring(0, 3) + "";
+                sql = "SELECT clase FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
                 {
-                    lbNaturaleza.Text = db.consultaStr(sql);
+                    lbNaturaleza_v.Text = db.consultaStr(sql);
                 }
                 catch (Exception)
                 {
-                    lbNaturaleza.Text = "";
+                    lbNaturaleza_v.Text = "";
                 }
             }
         }
@@ -109,6 +109,11 @@ namespace Pokemon
         {
             btnEditar.UseVisualStyleBackColor = false;
             btnEditar.BackColor = Color.Transparent;
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

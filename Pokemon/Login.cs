@@ -11,10 +11,10 @@ using System.Windows.Forms;
 namespace Pokemon
 
 {
-    public partial class Form1 : Form
+    public partial class frmLogin : Form
     {
         Database db = new Database();
-        public Form1()
+        public frmLogin()
         {
             InitializeComponent();
             db.IniciarConexion("pokedex.accdb");
