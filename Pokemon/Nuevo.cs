@@ -45,15 +45,22 @@ namespace Pokemon
             int res;
             if ((txtNombre.Text != "") && (txtClase.Text != "") && (txtTipo.Text != "") && (txtPeso.Text != "") && (txtAltura.Text != ""))
             {
-                sql = "SELECT max(id)+1 FROM pokedex";
-                ipd = db.consultaStr(sql);
-                sql = "INSERT INTO pokedex VALUES ("+ipd+",'" + txtNombre.Text + "','" + txtTipo.Text +"',' '," + txtAltura.Text + "," + txtPeso.Text + ",'"+ txtClase.Text+"','images/151.png')";
-                res = db.ejecutar_slq(sql);
-                if (res == -1) MessageBox.Show("No se ha podido añadir el pokemon.");
-                padre.cargarPkmn();
-                this.Dispose();
-
-
+                try
+                {
+                    Double.Parse(txtPeso.Text);
+                    Double.Parse(txtAltura.Text);
+                    sql = "SELECT max(id)+1 FROM pokedex";
+                    ipd = db.consultaStr(sql);
+                    sql = "INSERT INTO pokedex VALUES (" + ipd + ",'" + txtNombre.Text + "','" + txtTipo.Text + "',' '," + txtAltura.Text + "," + txtPeso.Text + ",'" + txtClase.Text + "','images/151.png')";
+                    res = db.ejecutar_slq(sql);
+                    if (res == -1) MessageBox.Show("No se ha podido añadir el pokemon.");
+                    padre.cargarPkmn();
+                    this.Dispose();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Valor incorrecto en Peso o Altura.");
+                }
             }
             else
             {
