@@ -35,6 +35,7 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.lstBxPkmns = new System.Windows.Forms.ListBox();
             this.groupBoxDatos = new System.Windows.Forms.GroupBox();
+            this.lblTipo2 = new System.Windows.Forms.Label();
             this.lbAltura_v = new System.Windows.Forms.Label();
             this.lbPeso_v = new System.Windows.Forms.Label();
             this.lbTipo_v = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.groupBoxImagen = new System.Windows.Forms.GroupBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.picBxPkmns = new System.Windows.Forms.PictureBox();
-            this.lblTipo2_v = new System.Windows.Forms.Label();
             this.lblTipo2 = new System.Windows.Forms.Label();
             this.groupBoxLista.SuspendLayout();
             this.groupBoxDatos.SuspendLayout();
@@ -63,7 +63,7 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackColor = System.Drawing.Color.Snow;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnSalir.Location = new System.Drawing.Point(306, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(27, 23);
@@ -165,6 +165,15 @@
             this.groupBoxDatos.TabStop = false;
             this.groupBoxDatos.Text = "Datos";
             this.groupBoxDatos.Enter += new System.EventHandler(this.groupBoxDatos_Enter);
+            // 
+            // lblTipo2
+            // 
+            this.lblTipo2.AutoSize = true;
+            this.lblTipo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo2.Location = new System.Drawing.Point(71, 109);
+            this.lblTipo2.Name = "lblTipo2";
+            this.lblTipo2.Size = new System.Drawing.Size(0, 13);
+            this.lblTipo2.TabIndex = 12;
             // 
             // lbAltura_v
             // 
@@ -345,27 +354,14 @@
             this.picBxPkmns.TabIndex = 0;
             this.picBxPkmns.TabStop = false;
             // 
-            // lblTipo2_v
-            // 
-            this.lblTipo2_v.AutoSize = true;
-            this.lblTipo2_v.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo2_v.Location = new System.Drawing.Point(71, 112);
-            this.lblTipo2_v.Name = "lblTipo2_v";
-            this.lblTipo2_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTipo2_v.Size = new System.Drawing.Size(37, 13);
-            this.lblTipo2_v.TabIndex = 14;
-            this.lblTipo2_v.Text = "Planta";
-            // 
             // lblTipo2
             // 
             this.lblTipo2.AutoSize = true;
-            this.lblTipo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo2.Location = new System.Drawing.Point(6, 112);
+            this.lblTipo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo2.Location = new System.Drawing.Point(71, 109);
             this.lblTipo2.Name = "lblTipo2";
-            this.lblTipo2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTipo2.Size = new System.Drawing.Size(43, 13);
-            this.lblTipo2.TabIndex = 13;
-            this.lblTipo2.Text = "Tipo 2";
+            this.lblTipo2.Size = new System.Drawing.Size(0, 13);
+            this.lblTipo2.TabIndex = 12;
             // 
             // Principal
             // 
