@@ -14,8 +14,9 @@ namespace Pokemon
     {
 
         Database db = new Database();
-        public Registro()
+        public Registro(frmLogin l)
         {
+            this.SetDesktopLocation(l.DesktopLocation.X-209,l.DesktopLocation.Y);
             InitializeComponent();
             db.IniciarConexion("pokedex.accdb");
         }
@@ -29,6 +30,7 @@ namespace Pokemon
                 if (i > 0)
                 {
                     MessageBox.Show("Registrado con exito.");
+                    frmLogin.ventanaR = false;
                     this.Dispose();
                 }
                 else {
@@ -42,6 +44,7 @@ namespace Pokemon
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            frmLogin.ventanaR = false;
             this.Dispose();
         }
     }

@@ -122,7 +122,7 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackColor = System.Drawing.Color.Snow;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnSalir.Location = new System.Drawing.Point(270, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(27, 23);
@@ -224,6 +224,7 @@
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Editar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Editar";
             this.ResumeLayout(false);
             this.PerformLayout();

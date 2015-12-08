@@ -19,6 +19,7 @@ namespace Pokemon
         Principal padre;
         public Editar(String idPokemon,Principal p)
         {
+            this.SetDesktopLocation(p.DesktopLocation.X-298, p.DesktopLocation.Y);
             InitializeComponent();
             padre = p;
             id = Int32.Parse(idPokemon);
@@ -44,13 +45,11 @@ namespace Pokemon
             sql = "SELECT altura FROM pokedex WHERE id = " + id;
             res = db.consultaStr(sql);
             txtAltura.Text = res;
-
-
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            Principal.ventanaE = false;
             this.Dispose();
         }
 
@@ -81,6 +80,7 @@ namespace Pokemon
                 sql = "DELETE FROM pokedex WHERE ID = " + id;
                 res = db.ejecutar_slq(sql);
                 padre.cargarPkmn();
+                Principal.ventanaE = false;
                 this.Dispose();
             }
         }

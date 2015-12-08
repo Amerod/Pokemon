@@ -14,6 +14,7 @@ namespace Pokemon
     public partial class frmLogin : Form
     {
         Database db = new Database();
+        public static bool ventanaR = false;
         public frmLogin()
         {
             InitializeComponent();
@@ -43,8 +44,12 @@ namespace Pokemon
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Registro registro = new Registro();
-            registro.Visible = true;
+            if (!ventanaR)
+            {
+                Registro registro = new Registro(this);
+                registro.Visible = true;
+                ventanaR = true;
+            }
         }
 
         private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)

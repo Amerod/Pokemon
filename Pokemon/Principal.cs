@@ -12,9 +12,11 @@ namespace Pokemon
 {
     public partial class Principal : Form
     {
-        Form padre;
+        protected Form padre;
         Database db = new Database();
-        String sql;
+        protected String sql;
+        public static Boolean ventanaE = false;
+        public static Boolean ventanaN = false;
         public Principal(Form p)
         {
             InitializeComponent();            
@@ -35,15 +37,22 @@ namespace Pokemon
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Form editar = new Editar(lstBxPkmns.Text.Substring(0,3),this);
-            editar.Visible = true;
-
+            if (!ventanaE)
+            {
+                Form editar = new Editar(lstBxPkmns.Text.Substring(0, 3), this);
+                editar.Visible = true;
+                ventanaE = true;
+            }
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Form nuevo = new Nuevo(lstBxPkmns.Text.Substring(0, 3), this);
-            nuevo.Visible = true;
+            if (!ventanaN)
+            {
+                Form nuevo = new Nuevo(lstBxPkmns.Text.Substring(0, 3), this);
+                nuevo.Visible = true;
+                ventanaN = true;
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

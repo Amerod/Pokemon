@@ -18,6 +18,7 @@ namespace Pokemon
         Principal padre;
         public Nuevo(String idPokemon, Principal p)
         {
+            this.SetDesktopLocation(p.DesktopLocation.X + 334,p.DesktopLocation.Y);
             InitializeComponent();
             padre = p;
             id = idPokemon;
@@ -30,6 +31,7 @@ namespace Pokemon
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            Principal.ventanaN = false;
             this.Dispose();
         }
 
