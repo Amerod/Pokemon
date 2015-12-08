@@ -22,12 +22,16 @@ namespace Pokemon
             this.SetDesktopLocation(p.DesktopLocation.X-298, p.DesktopLocation.Y);
             InitializeComponent();
             padre = p;
-            id = Int32.Parse(idPokemon);
-            txtID.Text = id.ToString();
+            actuEditar(idPokemon);
+        }
+
+        public void actuEditar(String id) {
+            this.id = Int32.Parse(id);
+            txtID.Text = this.id.ToString();
             db.IniciarConexion("pokedex.accdb");
             sql = "SELECT nombre FROM pokedex WHERE id = " + id;
             String res = db.consultaStr(sql);
-            lblTitulo.Text = "#" + id.ToString() + " "+ res;
+            lblTitulo.Text = "#" + this.id.ToString() + " " + res;
             txtNombre.Text = res;
 
             sql = "SELECT clase FROM pokedex WHERE id = " + id;
@@ -60,27 +64,31 @@ namespace Pokemon
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             int res;
-            if ((txtNombre.Text != "") && (txtClase.Text != "") && (txtTipo.Text != "") && (txtPeso.Text != "") && (txtAltura.Text != ""))
+            if ((txtNombre.Text != "") && (txtClase.Text != "") && (txtPeso.Text != "") && (txtAltura.Text != ""))
             {
-                try
-                {
-                    Double.Parse(txtPeso.Text);
-                    Double.Parse(txtAltura.Text);
-                    sql = "UPDATE pokedex SET nombre='" + txtNombre.Text + "', tipo1='" + txtTipo.Text + "', tipo2='" + txtTipo2.Text + "',clase='" + txtClase.Text + "',altura='" + txtAltura.Text + "',peso='" + txtPeso.Text + "' WHERE id = " + id;
-                    res = db.ejecutar_slq(sql);
-                    if (res == -1) MessageBox.Show("El cambio de nombre ha fallado.");
-                    padre.cargarPkmn();
-                    this.Dispose();
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Valor incorrecto en Peso o Altura.");
-                }
 
-
+                if (txtTipo.Text != "")
+                {
+                    try
+                    {
+                        Double.Parse(txtPeso.Text);
+                        Double.Parse(txtAltura.Text);
+                        sql = "UPDATE pokedex SET nombre='" + txtNombre.Text + "', tipo1='" + txtTipo.Text + "', tipo2='" + txtTipo2.Text + "',clase='" + txtClase.Text + "',altura='" + txtAltura.Text + "',peso='" + txtPeso.Text + "' WHERE id = " + id;
+                        res = db.ejecutar_slq(sql);
+                        if (res == -1) MessageBox.Show("El cambio de nombre ha fallado.");
+                        padre.cargarPkmn();
+                        Principal.ventanaE = false;
+                        this.Dispose();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Peso y Altura solo admite numeros.");
+                    }
+                }
+                else { MessageBox.Show("Tipo 1 es obligatorio."); }
             }
             else {
-                MessageBox.Show("Rellena todos los campos.");
+                MessageBox.Show("Faltan campos por rellenar.");
             }
         }
 

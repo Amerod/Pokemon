@@ -245,6 +245,7 @@
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Editar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Editar";
             this.Load += new System.EventHandler(this.Editar_Load);
             this.ResumeLayout(false);

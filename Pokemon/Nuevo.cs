@@ -59,6 +59,7 @@ namespace Pokemon
                     res = db.ejecutar_slq(sql);
                     if (res == -1) MessageBox.Show("No se ha podido añadir el pokemon.");
                     padre.cargarPkmn();
+                    Principal.ventanaN = false;
                     this.Dispose();
                 }
                 catch (Exception)

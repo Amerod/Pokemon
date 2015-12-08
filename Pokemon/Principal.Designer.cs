@@ -51,7 +51,6 @@
             this.groupBoxImagen = new System.Windows.Forms.GroupBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.picBxPkmns = new System.Windows.Forms.PictureBox();
-            this.lblTipo2 = new System.Windows.Forms.Label();
             this.groupBoxLista.SuspendLayout();
             this.groupBoxDatos.SuspendLayout();
             this.groupBoxImagen.SuspendLayout();
@@ -81,7 +80,7 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(85, 13);
             this.lblTitulo.TabIndex = 8;
-            this.lblTitulo.Text = "Pokedex v0.7";
+            this.lblTitulo.Text = "Pokedex v1.1";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // groupBoxLista
@@ -142,7 +141,6 @@
             this.groupBoxDatos.BackColor = System.Drawing.Color.SteelBlue;
             this.groupBoxDatos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBoxDatos.BackgroundImage")));
             this.groupBoxDatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBoxDatos.Controls.Add(this.lblTipo2_v);
             this.groupBoxDatos.Controls.Add(this.lblTipo2);
             this.groupBoxDatos.Controls.Add(this.lbAltura_v);
             this.groupBoxDatos.Controls.Add(this.lbPeso_v);
@@ -354,15 +352,6 @@
             this.picBxPkmns.TabIndex = 0;
             this.picBxPkmns.TabStop = false;
             // 
-            // lblTipo2
-            // 
-            this.lblTipo2.AutoSize = true;
-            this.lblTipo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo2.Location = new System.Drawing.Point(71, 109);
-            this.lblTipo2.Name = "lblTipo2";
-            this.lblTipo2.Size = new System.Drawing.Size(0, 13);
-            this.lblTipo2.TabIndex = 12;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,7 +401,6 @@
         private System.Windows.Forms.Label lbNaturaleza_v;
         private System.Windows.Forms.Label lbNombre_v;
         private System.Windows.Forms.Label lbID_v;
-        private System.Windows.Forms.Label lblTipo2_v;
         private System.Windows.Forms.Label lblTipo2;
     }
 }

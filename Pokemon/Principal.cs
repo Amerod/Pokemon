@@ -14,6 +14,7 @@ namespace Pokemon
     {
         protected Form padre;
         Database db = new Database();
+        Editar editar;
         protected String sql;
         public static Boolean ventanaE = false;
         public static Boolean ventanaN = false;
@@ -39,7 +40,7 @@ namespace Pokemon
         {
             if (!ventanaE)
             {
-                Form editar = new Editar(lstBxPkmns.Text.Substring(0, 3), this);
+                editar = new Editar(lstBxPkmns.Text.Substring(0, 3), this);
                 editar.Visible = true;
                 ventanaE = true;
             }
@@ -95,11 +96,11 @@ namespace Pokemon
                 sql = "SELECT tipo2 FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
                 {
-                    lblTipo2_v.Text = db.consultaStr(sql);
+                    lblTipo2.Text = db.consultaStr(sql);
                 }
                 catch (Exception)
                 {
-                    lblTipo2_v.Text = "";
+                    lblTipo2.Text = "";
                 }
                 sql = "SELECT clase FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
@@ -109,6 +110,9 @@ namespace Pokemon
                 catch (Exception)
                 {
                     lbNaturaleza_v.Text = "";
+                }
+                if (ventanaE) {
+                    editar.actuEditar(lstBxPkmns.Text.Substring(0, 3));
                 }
             }
         }

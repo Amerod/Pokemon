@@ -261,7 +261,6 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblNNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(1000, 0);
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Nuevo";
