@@ -95,11 +95,11 @@ namespace Pokemon
                 sql = "SELECT tipo2 FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
                 {
-                    lblTipo2.Text = db.consultaStr(sql);
+                    lblTipo2_v.Text = db.consultaStr(sql);
                 }
                 catch (Exception)
                 {
-                    lbTipo_v.Text = "";
+                    lblTipo2_v.Text = "";
                 }
                 sql = "SELECT clase FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
@@ -125,11 +125,21 @@ namespace Pokemon
 
         private void btnEditar_MouseEnter(object sender, EventArgs e)
         {
+
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt(object sender, EventArgs e)
+        {
             btnEditar.UseVisualStyleBackColor = false;
             btnEditar.BackColor = Color.Transparent;
         }
 
-        private void lblTitulo_Click(object sender, EventArgs e)
+        private void groupBoxDatos_Enter(object sender, EventArgs e)
         {
 
         }
