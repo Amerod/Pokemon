@@ -46,8 +46,6 @@
             this.lblImagen = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnImg = new System.Windows.Forms.Button();
-            this.txtTipo2 = new System.Windows.Forms.TextBox();
-            this.lblTipo2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNNombre
@@ -79,7 +77,7 @@
             // 
             this.lblAltura.AutoSize = true;
             this.lblAltura.ForeColor = System.Drawing.Color.White;
-            this.lblAltura.Location = new System.Drawing.Point(12, 223);
+            this.lblAltura.Location = new System.Drawing.Point(12, 197);
             this.lblAltura.Name = "lblAltura";
             this.lblAltura.Size = new System.Drawing.Size(34, 13);
             this.lblAltura.TabIndex = 19;
@@ -89,7 +87,7 @@
             // 
             this.lblPeso.AutoSize = true;
             this.lblPeso.ForeColor = System.Drawing.Color.White;
-            this.lblPeso.Location = new System.Drawing.Point(12, 198);
+            this.lblPeso.Location = new System.Drawing.Point(12, 172);
             this.lblPeso.Name = "lblPeso";
             this.lblPeso.Size = new System.Drawing.Size(31, 13);
             this.lblPeso.TabIndex = 18;
@@ -167,14 +165,14 @@
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(109, 195);
+            this.txtPeso.Location = new System.Drawing.Point(109, 169);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(146, 20);
             this.txtPeso.TabIndex = 24;
             // 
             // txtAltura
             // 
-            this.txtAltura.Location = new System.Drawing.Point(109, 221);
+            this.txtAltura.Location = new System.Drawing.Point(109, 195);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(146, 20);
             this.txtAltura.TabIndex = 25;
@@ -184,7 +182,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(187)))), ((int)(((byte)(40)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(180, 281);
+            this.btnGuardar.Location = new System.Drawing.Point(180, 266);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 26;
@@ -196,7 +194,7 @@
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.ForeColor = System.Drawing.Color.White;
-            this.lblImagen.Location = new System.Drawing.Point(12, 250);
+            this.lblImagen.Location = new System.Drawing.Point(12, 224);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(42, 13);
             this.lblImagen.TabIndex = 28;
@@ -210,7 +208,7 @@
             // 
             this.btnImg.BackColor = System.Drawing.Color.Snow;
             this.btnImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImg.Location = new System.Drawing.Point(109, 245);
+            this.btnImg.Location = new System.Drawing.Point(109, 219);
             this.btnImg.Name = "btnImg";
             this.btnImg.Size = new System.Drawing.Size(146, 23);
             this.btnImg.TabIndex = 29;
@@ -218,31 +216,12 @@
             this.btnImg.UseVisualStyleBackColor = false;
             this.btnImg.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtTipo2
-            // 
-            this.txtTipo2.Location = new System.Drawing.Point(109, 169);
-            this.txtTipo2.Name = "txtTipo2";
-            this.txtTipo2.Size = new System.Drawing.Size(146, 20);
-            this.txtTipo2.TabIndex = 31;
-            // 
-            // lblTipo2
-            // 
-            this.lblTipo2.AutoSize = true;
-            this.lblTipo2.ForeColor = System.Drawing.Color.White;
-            this.lblTipo2.Location = new System.Drawing.Point(12, 172);
-            this.lblTipo2.Name = "lblTipo2";
-            this.lblTipo2.Size = new System.Drawing.Size(37, 13);
-            this.lblTipo2.TabIndex = 30;
-            this.lblTipo2.Text = "Tipo 2";
-            // 
             // Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(276, 316);
-            this.Controls.Add(this.txtTipo2);
-            this.Controls.Add(this.lblTipo2);
+            this.ClientSize = new System.Drawing.Size(276, 301);
             this.Controls.Add(this.btnImg);
             this.Controls.Add(this.lblImagen);
             this.Controls.Add(this.btnGuardar);
@@ -261,9 +240,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblNNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(1000, 0);
             this.Name = "Nuevo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Nuevo";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -290,7 +267,5 @@
         private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnImg;
-        private System.Windows.Forms.TextBox txtTipo2;
-        private System.Windows.Forms.Label lblTipo2;
     }
 }
