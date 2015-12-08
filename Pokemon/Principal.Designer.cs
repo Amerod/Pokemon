@@ -142,6 +142,7 @@
             this.groupBoxDatos.BackColor = System.Drawing.Color.SteelBlue;
             this.groupBoxDatos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBoxDatos.BackgroundImage")));
             this.groupBoxDatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBoxDatos.Controls.Add(this.lblTipo2_v);
             this.groupBoxDatos.Controls.Add(this.lblTipo2);
             this.groupBoxDatos.Controls.Add(this.lbAltura_v);
             this.groupBoxDatos.Controls.Add(this.lbPeso_v);
@@ -163,6 +164,7 @@
             this.groupBoxDatos.TabIndex = 1;
             this.groupBoxDatos.TabStop = false;
             this.groupBoxDatos.Text = "Datos";
+            this.groupBoxDatos.Enter += new System.EventHandler(this.groupBoxDatos_Enter);
             // 
             // lblTipo2
             // 
@@ -177,8 +179,9 @@
             // 
             this.lbAltura_v.AutoSize = true;
             this.lbAltura_v.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAltura_v.Location = new System.Drawing.Point(71, 157);
+            this.lbAltura_v.Location = new System.Drawing.Point(71, 161);
             this.lbAltura_v.Name = "lbAltura_v";
+            this.lbAltura_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbAltura_v.Size = new System.Drawing.Size(28, 13);
             this.lbAltura_v.TabIndex = 11;
             this.lbAltura_v.Text = "0.71";
@@ -187,8 +190,9 @@
             // 
             this.lbPeso_v.AutoSize = true;
             this.lbPeso_v.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPeso_v.Location = new System.Drawing.Point(71, 132);
+            this.lbPeso_v.Location = new System.Drawing.Point(71, 136);
             this.lbPeso_v.Name = "lbPeso_v";
+            this.lbPeso_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbPeso_v.Size = new System.Drawing.Size(22, 13);
             this.lbPeso_v.TabIndex = 10;
             this.lbPeso_v.Text = "6.9";
@@ -199,6 +203,7 @@
             this.lbTipo_v.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTipo_v.Location = new System.Drawing.Point(71, 87);
             this.lbTipo_v.Name = "lbTipo_v";
+            this.lbTipo_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbTipo_v.Size = new System.Drawing.Size(37, 13);
             this.lbTipo_v.TabIndex = 9;
             this.lbTipo_v.Text = "Planta";
@@ -209,6 +214,7 @@
             this.lbNaturaleza_v.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNaturaleza_v.Location = new System.Drawing.Point(71, 62);
             this.lbNaturaleza_v.Name = "lbNaturaleza_v";
+            this.lbNaturaleza_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNaturaleza_v.Size = new System.Drawing.Size(40, 13);
             this.lbNaturaleza_v.TabIndex = 8;
             this.lbNaturaleza_v.Text = "Semilla";
@@ -219,6 +225,7 @@
             this.lbNombre_v.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombre_v.Location = new System.Drawing.Point(71, 38);
             this.lbNombre_v.Name = "lbNombre_v";
+            this.lbNombre_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNombre_v.Size = new System.Drawing.Size(54, 13);
             this.lbNombre_v.TabIndex = 7;
             this.lbNombre_v.Text = "Bulbasaur";
@@ -229,6 +236,7 @@
             this.lbID_v.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbID_v.Location = new System.Drawing.Point(71, 16);
             this.lbID_v.Name = "lbID_v";
+            this.lbID_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbID_v.Size = new System.Drawing.Size(13, 13);
             this.lbID_v.TabIndex = 6;
             this.lbID_v.Text = "1";
@@ -237,8 +245,9 @@
             // 
             this.lblAltura.AutoSize = true;
             this.lblAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAltura.Location = new System.Drawing.Point(6, 157);
+            this.lblAltura.Location = new System.Drawing.Point(6, 161);
             this.lblAltura.Name = "lblAltura";
+            this.lblAltura.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblAltura.Size = new System.Drawing.Size(40, 13);
             this.lblAltura.TabIndex = 5;
             this.lblAltura.Text = "Altura";
@@ -247,8 +256,9 @@
             // 
             this.lblPeso.AutoSize = true;
             this.lblPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeso.Location = new System.Drawing.Point(6, 132);
+            this.lblPeso.Location = new System.Drawing.Point(6, 136);
             this.lblPeso.Name = "lblPeso";
+            this.lblPeso.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblPeso.Size = new System.Drawing.Size(35, 13);
             this.lblPeso.TabIndex = 4;
             this.lblPeso.Text = "Peso";
@@ -257,8 +267,9 @@
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(6, 95);
+            this.lblTipo.Location = new System.Drawing.Point(6, 87);
             this.lblTipo.Name = "lblTipo";
+            this.lblTipo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTipo.Size = new System.Drawing.Size(32, 13);
             this.lblTipo.TabIndex = 3;
             this.lblTipo.Text = "Tipo";
@@ -269,6 +280,7 @@
             this.lblClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClase.Location = new System.Drawing.Point(6, 62);
             this.lblClase.Name = "lblClase";
+            this.lblClase.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblClase.Size = new System.Drawing.Size(38, 13);
             this.lblClase.TabIndex = 2;
             this.lblClase.Text = "Clase";
@@ -279,6 +291,7 @@
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(6, 38);
             this.lblNombre.Name = "lblNombre";
+            this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNombre.Size = new System.Drawing.Size(50, 13);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre";
@@ -289,6 +302,7 @@
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.Location = new System.Drawing.Point(6, 16);
             this.lblID.Name = "lblID";
+            this.lblID.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblID.Size = new System.Drawing.Size(20, 13);
             this.lblID.TabIndex = 0;
             this.lblID.Text = "ID";
@@ -398,6 +412,7 @@
         private System.Windows.Forms.Label lbNaturaleza_v;
         private System.Windows.Forms.Label lbNombre_v;
         private System.Windows.Forms.Label lbID_v;
+        private System.Windows.Forms.Label lblTipo2_v;
         private System.Windows.Forms.Label lblTipo2;
     }
 }

@@ -38,6 +38,10 @@ namespace Pokemon
             res = db.consultaStr(sql);
             txtTipo.Text = res;
 
+            sql = "SELECT tipo2 FROM pokedex WHERE id = " + id;
+            res = db.consultaStr(sql);
+            txtTipo2.Text = res;
+
             sql = "SELECT peso FROM pokedex WHERE id = " + id;
             res = db.consultaStr(sql);
             txtPeso.Text = res;
@@ -62,7 +66,7 @@ namespace Pokemon
                 {
                     Double.Parse(txtPeso.Text);
                     Double.Parse(txtAltura.Text);
-                    sql = "UPDATE pokedex SET nombre='" + txtNombre.Text + "', tipo1='" + txtTipo.Text + "',clase='" + txtClase.Text + "',altura='" + txtAltura.Text + "',peso='" + txtPeso.Text + "' WHERE id = " + id;
+                    sql = "UPDATE pokedex SET nombre='" + txtNombre.Text + "', tipo1='" + txtTipo.Text + "', tipo2='" + txtTipo2.Text + "',clase='" + txtClase.Text + "',altura='" + txtAltura.Text + "',peso='" + txtPeso.Text + "' WHERE id = " + id;
                     res = db.ejecutar_slq(sql);
                     if (res == -1) MessageBox.Show("El cambio de nombre ha fallado.");
                     padre.cargarPkmn();
@@ -92,6 +96,11 @@ namespace Pokemon
                 Principal.ventanaE = false;
                 this.Dispose();
             }
+        }
+
+        private void Editar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

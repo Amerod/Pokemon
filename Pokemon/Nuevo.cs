@@ -15,6 +15,7 @@ namespace Pokemon
         Database db = new Database();
         String sql,ipd;
         String id = "";
+        String direccion;
         Principal padre;
         public Nuevo(String idPokemon, Principal p)
         {
@@ -37,9 +38,10 @@ namespace Pokemon
 
         private void button1_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "Imagenes PNG (*.png)|*.png|Imagenes JPG (*.jpg)|*.jpg";
             openFileDialog1.ShowDialog();
-            String direccion = openFileDialog1.FileName;
-            MessageBox.Show(direccion);
+            direccion = openFileDialog1.FileName;
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -53,7 +55,7 @@ namespace Pokemon
                     Double.Parse(txtAltura.Text);
                     sql = "SELECT max(id)+1 FROM pokedex";
                     ipd = db.consultaStr(sql);
-                    sql = "INSERT INTO pokedex VALUES (" + ipd + ",'" + txtNombre.Text + "','" + txtTipo.Text + "',' '," + txtAltura.Text + "," + txtPeso.Text + ",'" + txtClase.Text + "','images/151.png')";
+                    sql = "INSERT INTO pokedex VALUES (" + ipd + ",'" + txtNombre.Text + "','" + txtTipo.Text + "','"+txtTipo2.Text+"'," + txtAltura.Text + "," + txtPeso.Text + ",'" + txtClase.Text + "','"+direccion+"')";
                     res = db.ejecutar_slq(sql);
                     if (res == -1) MessageBox.Show("No se ha podido añadir el pokemon.");
                     padre.cargarPkmn();

@@ -44,6 +44,8 @@
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
+            this.txtTipo2 = new System.Windows.Forms.TextBox();
+            this.lblTipo2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -61,7 +63,7 @@
             // 
             this.lblAltura.AutoSize = true;
             this.lblAltura.ForeColor = System.Drawing.Color.White;
-            this.lblAltura.Location = new System.Drawing.Point(12, 194);
+            this.lblAltura.Location = new System.Drawing.Point(12, 220);
             this.lblAltura.Name = "lblAltura";
             this.lblAltura.Size = new System.Drawing.Size(34, 13);
             this.lblAltura.TabIndex = 11;
@@ -71,7 +73,7 @@
             // 
             this.lblPeso.AutoSize = true;
             this.lblPeso.ForeColor = System.Drawing.Color.White;
-            this.lblPeso.Location = new System.Drawing.Point(12, 169);
+            this.lblPeso.Location = new System.Drawing.Point(12, 195);
             this.lblPeso.Name = "lblPeso";
             this.lblPeso.Size = new System.Drawing.Size(31, 13);
             this.lblPeso.TabIndex = 10;
@@ -81,7 +83,7 @@
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.ForeColor = System.Drawing.Color.White;
-            this.lblTipo.Location = new System.Drawing.Point(12, 143);
+            this.lblTipo.Location = new System.Drawing.Point(12, 142);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(28, 13);
             this.lblTipo.TabIndex = 9;
@@ -162,14 +164,14 @@
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(111, 165);
+            this.txtPeso.Location = new System.Drawing.Point(111, 191);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(158, 20);
             this.txtPeso.TabIndex = 17;
             // 
             // txtAltura
             // 
-            this.txtAltura.Location = new System.Drawing.Point(111, 191);
+            this.txtAltura.Location = new System.Drawing.Point(111, 217);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(158, 20);
             this.txtAltura.TabIndex = 18;
@@ -179,7 +181,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(187)))), ((int)(((byte)(40)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(194, 234);
+            this.btnGuardar.Location = new System.Drawing.Point(194, 260);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 19;
@@ -192,7 +194,7 @@
             this.btnBorrar.BackColor = System.Drawing.Color.Red;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(15, 234);
+            this.btnBorrar.Location = new System.Drawing.Point(15, 260);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(96, 23);
             this.btnBorrar.TabIndex = 20;
@@ -200,12 +202,31 @@
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
+            // txtTipo2
+            // 
+            this.txtTipo2.Location = new System.Drawing.Point(111, 165);
+            this.txtTipo2.Name = "txtTipo2";
+            this.txtTipo2.Size = new System.Drawing.Size(158, 20);
+            this.txtTipo2.TabIndex = 24;
+            // 
+            // lblTipo2
+            // 
+            this.lblTipo2.AutoSize = true;
+            this.lblTipo2.ForeColor = System.Drawing.Color.White;
+            this.lblTipo2.Location = new System.Drawing.Point(12, 169);
+            this.lblTipo2.Name = "lblTipo2";
+            this.lblTipo2.Size = new System.Drawing.Size(37, 13);
+            this.lblTipo2.TabIndex = 23;
+            this.lblTipo2.Text = "Tipo 2";
+            // 
             // Editar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(297, 279);
+            this.ClientSize = new System.Drawing.Size(297, 298);
+            this.Controls.Add(this.txtTipo2);
+            this.Controls.Add(this.lblTipo2);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtAltura);
@@ -225,6 +246,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Editar";
             this.Text = "Editar";
+            this.Load += new System.EventHandler(this.Editar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +270,7 @@
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.TextBox txtTipo2;
+        private System.Windows.Forms.Label lblTipo2;
     }
 }
