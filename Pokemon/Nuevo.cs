@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace Pokemon
         Database db = new Database();
         String sql,ipd;
         String id = "";
-        String direccion;
+        String pathAOrigen;
         Principal padre;
         public Nuevo(String idPokemon, Principal p)
         {
@@ -38,14 +39,16 @@ namespace Pokemon
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "Imagenes PNG (*.png)|*.png|Imagenes JPG (*.jpg)|*.jpg";
+            openFileDialog1.Filter = "Imagenes PNG (*.png)|*.png";
             openFileDialog1.ShowDialog();
-            direccion = openFileDialog1.FileName;
+            pathAOrigen = openFileDialog1.FileName;
+            MessageBox.Show(pathAOrigen);
 
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            string pathADestino = @"C:\Users\Eric\Source\Repos\Pokemon\Pokemon\bin\Debug\images";
             int res;
             if ((txtNombre.Text != "") && (txtClase.Text != "") && (txtTipo.Text != "") && (txtPeso.Text != "") && (txtAltura.Text != ""))
             {
@@ -53,9 +56,17 @@ namespace Pokemon
                 {
                     Double.Parse(txtPeso.Text);
                     Double.Parse(txtAltura.Text);
+                    if (File.Exists(pathAOrigen))
+                    {
+                        File.Copy(pathAOrigen, pathADestino, true);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha encontrado la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                     sql = "SELECT max(id)+1 FROM pokedex";
                     ipd = db.consultaStr(sql, "pokedex");
-                    sql = "INSERT INTO pokedex VALUES (" + ipd + ",'" + txtNombre.Text + "','" + txtTipo.Text + "','"+txtTipo2.Text+"'," + txtAltura.Text + "," + txtPeso.Text + ",'" + txtClase.Text + "','"+direccion+"')";
+                    sql = "INSERT INTO pokedex VALUES (" + ipd + ",'" + txtNombre.Text + "','" + txtTipo.Text + "','"+txtTipo2.Text+"'," + txtAltura.Text + "," + txtPeso.Text + ",'" + txtClase.Text + "','"+ pathAOrigen + "')";
                     res = db.ejecutar_slq(sql);
                     if (res == -1) MessageBox.Show("No se ha podido añadir el pokemon.");
                     padre.cargarPkmn();
