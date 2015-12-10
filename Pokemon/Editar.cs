@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -100,6 +101,7 @@ namespace Pokemon
                 int res;
                 sql = "DELETE FROM pokedex WHERE ID = " + id;
                 res = db.ejecutar_slq(sql);
+                File.Delete("images/" + id + ".png");
                 padre.cargarPkmn();
                 Principal.ventanaE = false;
                 this.Dispose();
