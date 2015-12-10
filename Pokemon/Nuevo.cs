@@ -26,7 +26,7 @@ namespace Pokemon
             txtID.Text = idPokemon;
             db.IniciarConexion("pokedex.accdb");
             sql = "SELECT max(id)+1 FROM pokedex";
-            ipd = db.consultaStr(sql);
+            ipd = db.consultaStr(sql, "pokedex");
             txtID.Text = ipd;
         }
 
@@ -54,7 +54,7 @@ namespace Pokemon
                     Double.Parse(txtPeso.Text);
                     Double.Parse(txtAltura.Text);
                     sql = "SELECT max(id)+1 FROM pokedex";
-                    ipd = db.consultaStr(sql);
+                    ipd = db.consultaStr(sql, "pokedex");
                     sql = "INSERT INTO pokedex VALUES (" + ipd + ",'" + txtNombre.Text + "','" + txtTipo.Text + "','"+txtTipo2.Text+"'," + txtAltura.Text + "," + txtPeso.Text + ",'" + txtClase.Text + "','"+direccion+"')";
                     res = db.ejecutar_slq(sql);
                     if (res == -1) MessageBox.Show("No se ha podido añadir el pokemon.");

@@ -28,7 +28,7 @@ namespace Pokemon
         }
         public void cargarPkmn() {
             sql = "SELECT id,nombre FROM pokedex";
-            db.consultar(sql, lstBxPkmns);
+            db.pokemonAdmin(sql, lstBxPkmns);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -61,15 +61,15 @@ namespace Pokemon
             if (this.Visible)
             {
                 sql = "SELECT id FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
-                lbID_v.Text = db.consultaStr(sql);
+                lbID_v.Text = db.consultaStr(sql,"pokedex");
                 sql = "SELECT Imagen FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0,3) + "";
-                picBxPkmns.ImageLocation = db.consultaStr(sql); 
+                picBxPkmns.ImageLocation = db.consultaStr(sql, "pokedex"); 
                 sql = "SELECT nombre FROM pokedex WHERE id = "+lstBxPkmns.Text.Substring(0,3)+"";
-                lbNombre_v.Text = db.consultaStr(sql);
+                lbNombre_v.Text = db.consultaStr(sql, "pokedex");
                 sql = "SELECT peso FROM pokedex WHERE id = "+ lstBxPkmns.Text.Substring(0, 3)+"";
                 try
                 {
-                    lbPeso_v.Text = db.consultaStr(sql);
+                    lbPeso_v.Text = db.consultaStr(sql, "pokedex");
                 }
                 catch (Exception)
                 {
@@ -78,7 +78,7 @@ namespace Pokemon
                 sql = "SELECT altura FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
                 {
-                    lbAltura_v.Text = db.consultaStr(sql);
+                    lbAltura_v.Text = db.consultaStr(sql, "pokedex");
                 }
                 catch (Exception)
                 {
@@ -87,7 +87,7 @@ namespace Pokemon
                 sql = "SELECT tipo1 FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
                 {
-                    lbTipo_v.Text = db.consultaStr(sql);
+                    lbTipo_v.Text = db.consultaStr(sql, "pokedex");
                 }
                 catch (Exception)
                 {
@@ -96,7 +96,7 @@ namespace Pokemon
                 sql = "SELECT tipo2 FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
                 {
-                    lblTipo2.Text = db.consultaStr(sql);
+                    lblTipo2.Text = db.consultaStr(sql, "pokedex");
                 }
                 catch (Exception)
                 {
@@ -105,7 +105,7 @@ namespace Pokemon
                 sql = "SELECT clase FROM pokedex WHERE id = " + lstBxPkmns.Text.Substring(0, 3) + "";
                 try
                 {
-                    lbNaturaleza_v.Text = db.consultaStr(sql);
+                    lbNaturaleza_v.Text = db.consultaStr(sql, "pokedex");
                 }
                 catch (Exception)
                 {

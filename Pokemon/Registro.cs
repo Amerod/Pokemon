@@ -16,7 +16,7 @@ namespace Pokemon
         Database db = new Database();
         public Registro(frmLogin l)
         {
-            this.SetDesktopLocation(l.DesktopLocation.X-209,l.DesktopLocation.Y);
+            this.SetDesktopLocation(l.DesktopLocation.X-208,l.DesktopLocation.Y);
             InitializeComponent();
             db.IniciarConexion("pokedex.accdb");
         }

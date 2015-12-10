@@ -1,6 +1,6 @@
 ﻿namespace Pokemon
 {
-    partial class Principal
+    partial class PrincipalJugador
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalJugador));
             this.groupBoxLista = new System.Windows.Forms.GroupBox();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.lstBxPkmns = new System.Windows.Forms.ListBox();
             this.groupBoxDatos = new System.Windows.Forms.GroupBox();
             this.lblTipo2 = new System.Windows.Forms.Label();
@@ -49,68 +46,35 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.groupBoxImagen = new System.Windows.Forms.GroupBox();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.picBxPkmns = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnJugar = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblCapturados = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBoxLista.SuspendLayout();
             this.groupBoxDatos.SuspendLayout();
             this.groupBoxImagen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxPkmns)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.BackColor = System.Drawing.Color.Snow;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnSalir.Location = new System.Drawing.Point(306, 0);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(27, 23);
-            this.btnSalir.TabIndex = 7;
-            this.btnSalir.Text = "X";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblTitulo.Location = new System.Drawing.Point(8, 5);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(85, 13);
-            this.lblTitulo.TabIndex = 8;
-            this.lblTitulo.Text = "Pokedex v1.5";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
-            // 
             // groupBoxLista
             // 
             this.groupBoxLista.BackColor = System.Drawing.Color.SteelBlue;
             this.groupBoxLista.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBoxLista.BackgroundImage")));
             this.groupBoxLista.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBoxLista.Controls.Add(this.btnRegistrar);
             this.groupBoxLista.Controls.Add(this.lstBxPkmns);
             this.groupBoxLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBoxLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxLista.ForeColor = System.Drawing.Color.White;
-            this.groupBoxLista.Location = new System.Drawing.Point(169, 36);
+            this.groupBoxLista.Location = new System.Drawing.Point(169, 76);
             this.groupBoxLista.Name = "groupBoxLista";
             this.groupBoxLista.Size = new System.Drawing.Size(150, 342);
-            this.groupBoxLista.TabIndex = 2;
+            this.groupBoxLista.TabIndex = 5;
             this.groupBoxLista.TabStop = false;
             this.groupBoxLista.Text = "Lista";
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(187)))), ((int)(((byte)(40)))));
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Location = new System.Drawing.Point(6, 313);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(138, 23);
-            this.btnRegistrar.TabIndex = 1;
-            this.btnRegistrar.Text = "Registrar nuevo pokemon";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // lstBxPkmns
             // 
@@ -122,19 +86,12 @@
             this.lstBxPkmns.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstBxPkmns.ForeColor = System.Drawing.Color.Transparent;
             this.lstBxPkmns.Items.AddRange(new object[] {
-            "1.-Bulbasaur",
-            "2.-Venosaur",
-            "3.-Ivisaur",
-            "4.-Charmander",
-            "5.-Charmaleon",
-            "6.-Charizard"});
+            ""});
             this.lstBxPkmns.Location = new System.Drawing.Point(6, 19);
             this.lstBxPkmns.Name = "lstBxPkmns";
-            this.lstBxPkmns.Size = new System.Drawing.Size(138, 286);
-            this.lstBxPkmns.Sorted = true;
+            this.lstBxPkmns.Size = new System.Drawing.Size(138, 312);
             this.lstBxPkmns.TabIndex = 0;
-            this.lstBxPkmns.Click += new System.EventHandler(this.listBox1_Click);
-            this.lstBxPkmns.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lstBxPkmns.SelectedIndexChanged += new System.EventHandler(this.lstBxPkmns_SelectedIndexChanged);
             // 
             // groupBoxDatos
             // 
@@ -156,13 +113,12 @@
             this.groupBoxDatos.Controls.Add(this.lblID);
             this.groupBoxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxDatos.ForeColor = System.Drawing.SystemColors.Window;
-            this.groupBoxDatos.Location = new System.Drawing.Point(12, 192);
+            this.groupBoxDatos.Location = new System.Drawing.Point(12, 232);
             this.groupBoxDatos.Name = "groupBoxDatos";
             this.groupBoxDatos.Size = new System.Drawing.Size(150, 186);
-            this.groupBoxDatos.TabIndex = 1;
+            this.groupBoxDatos.TabIndex = 4;
             this.groupBoxDatos.TabStop = false;
             this.groupBoxDatos.Text = "Datos";
-            this.groupBoxDatos.Enter += new System.EventHandler(this.groupBoxDatos_Enter);
             // 
             // lblTipo2
             // 
@@ -170,8 +126,9 @@
             this.lblTipo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo2.Location = new System.Drawing.Point(71, 109);
             this.lblTipo2.Name = "lblTipo2";
-            this.lblTipo2.Size = new System.Drawing.Size(0, 13);
+            this.lblTipo2.Size = new System.Drawing.Size(25, 13);
             this.lblTipo2.TabIndex = 12;
+            this.lblTipo2.Text = "???";
             // 
             // lbAltura_v
             // 
@@ -180,9 +137,9 @@
             this.lbAltura_v.Location = new System.Drawing.Point(71, 161);
             this.lbAltura_v.Name = "lbAltura_v";
             this.lbAltura_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbAltura_v.Size = new System.Drawing.Size(28, 13);
+            this.lbAltura_v.Size = new System.Drawing.Size(25, 13);
             this.lbAltura_v.TabIndex = 11;
-            this.lbAltura_v.Text = "0.71";
+            this.lbAltura_v.Text = "???";
             // 
             // lbPeso_v
             // 
@@ -191,9 +148,9 @@
             this.lbPeso_v.Location = new System.Drawing.Point(71, 136);
             this.lbPeso_v.Name = "lbPeso_v";
             this.lbPeso_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbPeso_v.Size = new System.Drawing.Size(22, 13);
+            this.lbPeso_v.Size = new System.Drawing.Size(25, 13);
             this.lbPeso_v.TabIndex = 10;
-            this.lbPeso_v.Text = "6.9";
+            this.lbPeso_v.Text = "???";
             // 
             // lbTipo_v
             // 
@@ -202,9 +159,9 @@
             this.lbTipo_v.Location = new System.Drawing.Point(71, 87);
             this.lbTipo_v.Name = "lbTipo_v";
             this.lbTipo_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbTipo_v.Size = new System.Drawing.Size(37, 13);
+            this.lbTipo_v.Size = new System.Drawing.Size(25, 13);
             this.lbTipo_v.TabIndex = 9;
-            this.lbTipo_v.Text = "Planta";
+            this.lbTipo_v.Text = "???";
             // 
             // lbNaturaleza_v
             // 
@@ -213,9 +170,9 @@
             this.lbNaturaleza_v.Location = new System.Drawing.Point(71, 62);
             this.lbNaturaleza_v.Name = "lbNaturaleza_v";
             this.lbNaturaleza_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNaturaleza_v.Size = new System.Drawing.Size(40, 13);
+            this.lbNaturaleza_v.Size = new System.Drawing.Size(25, 13);
             this.lbNaturaleza_v.TabIndex = 8;
-            this.lbNaturaleza_v.Text = "Semilla";
+            this.lbNaturaleza_v.Text = "???";
             // 
             // lbNombre_v
             // 
@@ -224,9 +181,9 @@
             this.lbNombre_v.Location = new System.Drawing.Point(71, 38);
             this.lbNombre_v.Name = "lbNombre_v";
             this.lbNombre_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNombre_v.Size = new System.Drawing.Size(54, 13);
+            this.lbNombre_v.Size = new System.Drawing.Size(25, 13);
             this.lbNombre_v.TabIndex = 7;
-            this.lbNombre_v.Text = "Bulbasaur";
+            this.lbNombre_v.Text = "???";
             // 
             // lbID_v
             // 
@@ -235,9 +192,9 @@
             this.lbID_v.Location = new System.Drawing.Point(71, 16);
             this.lbID_v.Name = "lbID_v";
             this.lbID_v.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbID_v.Size = new System.Drawing.Size(13, 13);
+            this.lbID_v.Size = new System.Drawing.Size(25, 13);
             this.lbID_v.TabIndex = 6;
-            this.lbID_v.Text = "1";
+            this.lbID_v.Text = "???";
             // 
             // lblAltura
             // 
@@ -310,33 +267,15 @@
             this.groupBoxImagen.BackColor = System.Drawing.Color.SteelBlue;
             this.groupBoxImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBoxImagen.BackgroundImage")));
             this.groupBoxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBoxImagen.Controls.Add(this.btnEditar);
             this.groupBoxImagen.Controls.Add(this.picBxPkmns);
             this.groupBoxImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxImagen.ForeColor = System.Drawing.SystemColors.Window;
-            this.groupBoxImagen.Location = new System.Drawing.Point(12, 36);
+            this.groupBoxImagen.Location = new System.Drawing.Point(12, 76);
             this.groupBoxImagen.Name = "groupBoxImagen";
             this.groupBoxImagen.Size = new System.Drawing.Size(150, 150);
-            this.groupBoxImagen.TabIndex = 0;
+            this.groupBoxImagen.TabIndex = 3;
             this.groupBoxImagen.TabStop = false;
             this.groupBoxImagen.Text = "Imagen";
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
-            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnEditar.Location = new System.Drawing.Point(127, 124);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(20, 20);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            this.btnEditar.MouseEnter += new System.EventHandler(this.btnEditar_MouseEnter);
             // 
             // picBxPkmns
             // 
@@ -344,7 +283,7 @@
             this.picBxPkmns.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBxPkmns.BackgroundImage")));
             this.picBxPkmns.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBxPkmns.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picBxPkmns.ImageLocation = "images/1.png";
+            this.picBxPkmns.ImageLocation = "";
             this.picBxPkmns.Location = new System.Drawing.Point(3, 16);
             this.picBxPkmns.Name = "picBxPkmns";
             this.picBxPkmns.Size = new System.Drawing.Size(144, 131);
@@ -352,22 +291,109 @@
             this.picBxPkmns.TabIndex = 0;
             this.picBxPkmns.TabStop = false;
             // 
-            // Principal
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblTitulo.Location = new System.Drawing.Point(8, 5);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(85, 13);
+            this.lblTitulo.TabIndex = 10;
+            this.lblTitulo.Text = "Pokedex v1.5";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.Snow;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnSalir.Location = new System.Drawing.Point(306, 0);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(27, 23);
+            this.btnSalir.TabIndex = 9;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnJugar
+            // 
+            this.btnJugar.BackColor = System.Drawing.Color.Gold;
+            this.btnJugar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJugar.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJugar.ForeColor = System.Drawing.Color.White;
+            this.btnJugar.Location = new System.Drawing.Point(180, 25);
+            this.btnJugar.Name = "btnJugar";
+            this.btnJugar.Size = new System.Drawing.Size(120, 45);
+            this.btnJugar.TabIndex = 11;
+            this.btnJugar.Text = "Jugar";
+            this.btnJugar.UseVisualStyleBackColor = false;
+            this.btnJugar.Click += new System.EventHandler(this.btnJugar_Click);
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(18, 33);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(50, 13);
+            this.lblUsuario.TabIndex = 12;
+            this.lblUsuario.Text = "Nombre";
+            // 
+            // lblCapturados
+            // 
+            this.lblCapturados.AutoSize = true;
+            this.lblCapturados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapturados.ForeColor = System.Drawing.Color.White;
+            this.lblCapturados.Location = new System.Drawing.Point(43, 48);
+            this.lblCapturados.Name = "lblCapturados";
+            this.lblCapturados.Size = new System.Drawing.Size(13, 13);
+            this.lblCapturados.TabIndex = 13;
+            this.lblCapturados.Text = "/";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(18, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "000";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(52, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "000";
+            // 
+            // PrincipalJugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(333, 392);
+            this.ClientSize = new System.Drawing.Size(333, 430);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCapturados);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.btnJugar);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBoxLista);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBoxDatos);
             this.Controls.Add(this.groupBoxImagen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Principal";
+            this.Name = "PrincipalJugador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Principal";
-            this.Load += new System.EventHandler(this.Principal_Load);
+            this.Text = "PrincipalJugador";
             this.groupBoxLista.ResumeLayout(false);
             this.groupBoxDatos.ResumeLayout(false);
             this.groupBoxDatos.PerformLayout();
@@ -380,27 +406,30 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxImagen;
-        private System.Windows.Forms.GroupBox groupBoxDatos;
         private System.Windows.Forms.GroupBox groupBoxLista;
         private System.Windows.Forms.ListBox lstBxPkmns;
-        private System.Windows.Forms.PictureBox picBxPkmns;
-        private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Label lblAltura;
-        private System.Windows.Forms.Label lblPeso;
-        private System.Windows.Forms.Label lblTipo;
-        private System.Windows.Forms.Label lblClase;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.GroupBox groupBoxDatos;
+        private System.Windows.Forms.Label lblTipo2;
         private System.Windows.Forms.Label lbAltura_v;
         private System.Windows.Forms.Label lbPeso_v;
         private System.Windows.Forms.Label lbTipo_v;
         private System.Windows.Forms.Label lbNaturaleza_v;
         private System.Windows.Forms.Label lbNombre_v;
         private System.Windows.Forms.Label lbID_v;
-        private System.Windows.Forms.Label lblTipo2;
+        private System.Windows.Forms.Label lblAltura;
+        private System.Windows.Forms.Label lblPeso;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.Label lblClase;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.GroupBox groupBoxImagen;
+        private System.Windows.Forms.PictureBox picBxPkmns;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnJugar;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblCapturados;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -39,7 +39,7 @@ namespace Pokemon
             return i;
         }
 
-        public void consultar(string sql,ListBox listbox)
+        public void pokemonAdmin(string sql,ListBox listbox)
         {
             Adapter = new OleDbDataAdapter(sql, Conexion);
             DataSet dataSet = new DataSet();
@@ -53,12 +53,26 @@ namespace Pokemon
             }
             listbox.DataSource = pokemons;
         }
-        public String consultaStr(string sql)
+
+        public void pokemonUser(string sql,ListBox listbox)
         {
             Adapter = new OleDbDataAdapter(sql, Conexion);
             DataSet dataSet = new DataSet();
-            Adapter.Fill(dataSet, "pokedex");
-            return dataSet.Tables["pokedex"].Rows[0][0].ToString();
+            Adapter.Fill(dataSet, "pokimon");
+
+            foreach (DataRow fila in dataSet.Tables["pokimon"].Rows)
+            {
+                String nuevo = string.Format("{0,3} - {1}", fila["idPokemon"], consultaStr("SELECT nombre FROM pokedex WHERE id = " + fila["idPokemon"].ToString(), "pokedex"));
+                listbox.Items.RemoveAt(int.Parse(fila["idPokemon"].ToString()) - 1);
+                listbox.Items.Insert(int.Parse(fila["idPokemon"].ToString())-1,nuevo);
+            }
+        }
+        public String consultaStr(string sql,string tabla)
+        {
+            Adapter = new OleDbDataAdapter(sql, Conexion);
+            DataSet dataSet = new DataSet();
+            Adapter.Fill(dataSet, tabla);
+            return dataSet.Tables[tabla].Rows[0][0].ToString();
         }
     }
 }

@@ -31,12 +31,21 @@ namespace Pokemon
             String sql = "select * from usuarios where nombreUsuario = '"+txtIDentrenador.Text+"' and pass = '"+txtContrasena.Text+"'";
             try
             {
-                db.consultaStr(sql);
-                Form principal = new Principal(this);
-                principal.Visible = true;
-                this.Visible = false;
+                db.consultaStr(sql, "usuarios");
+                if (db.consultaStr("SELECT tipo FROM usuarios WHERE nombreUsuario = '"+txtIDentrenador.Text+"'","usuarios") == "0")
+                {
+                    Principal principal = new Principal(this);
+                    principal.Visible = true;
+                    this.Visible = false;
+                }
+                else
+                {
+                    PrincipalJugador principal = new PrincipalJugador(this, txtIDentrenador.Text);
+                    principal.Visible = true;
+                    this.Visible = false;
+                }
             }
-            catch (Exception)
+            catch (Exception a)
             {
                 MessageBox.Show("Usuario o contraseña incorrecto.");
             }            

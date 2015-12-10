@@ -30,28 +30,28 @@ namespace Pokemon
             txtID.Text = this.id.ToString();
             db.IniciarConexion("pokedex.accdb");
             sql = "SELECT nombre FROM pokedex WHERE id = " + id;
-            String res = db.consultaStr(sql);
+            String res = db.consultaStr(sql, "pokedex");
             lblTitulo.Text = "#" + this.id.ToString() + " " + res;
             txtNombre.Text = res;
 
             sql = "SELECT clase FROM pokedex WHERE id = " + id;
-            res = db.consultaStr(sql);
+            res = db.consultaStr(sql, "pokedex");
             txtClase.Text = res;
 
             sql = "SELECT tipo1 FROM pokedex WHERE id = " + id;
-            res = db.consultaStr(sql);
+            res = db.consultaStr(sql, "pokedex");
             txtTipo.Text = res;
 
             sql = "SELECT tipo2 FROM pokedex WHERE id = " + id;
-            res = db.consultaStr(sql);
+            res = db.consultaStr(sql, "pokedex");
             txtTipo2.Text = res;
 
             sql = "SELECT peso FROM pokedex WHERE id = " + id;
-            res = db.consultaStr(sql);
+            res = db.consultaStr(sql, "pokedex");
             txtPeso.Text = res;
 
             sql = "SELECT altura FROM pokedex WHERE id = " + id;
-            res = db.consultaStr(sql);
+            res = db.consultaStr(sql, "pokedex");
             txtAltura.Text = res;
         }
 
