@@ -128,7 +128,7 @@
             this.btnSalir.Location = new System.Drawing.Point(270, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(27, 23);
-            this.btnSalir.TabIndex = 12;
+            this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -139,42 +139,42 @@
             this.txtID.Location = new System.Drawing.Point(111, 61);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(158, 20);
-            this.txtID.TabIndex = 13;
+            this.txtID.TabIndex = 1;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(111, 87);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(158, 20);
-            this.txtNombre.TabIndex = 14;
+            this.txtNombre.TabIndex = 2;
             // 
             // txtClase
             // 
             this.txtClase.Location = new System.Drawing.Point(111, 113);
             this.txtClase.Name = "txtClase";
             this.txtClase.Size = new System.Drawing.Size(158, 20);
-            this.txtClase.TabIndex = 15;
+            this.txtClase.TabIndex = 3;
             // 
             // txtTipo
             // 
             this.txtTipo.Location = new System.Drawing.Point(111, 139);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(158, 20);
-            this.txtTipo.TabIndex = 16;
+            this.txtTipo.TabIndex = 4;
             // 
             // txtPeso
             // 
             this.txtPeso.Location = new System.Drawing.Point(111, 191);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(158, 20);
-            this.txtPeso.TabIndex = 17;
+            this.txtPeso.TabIndex = 6;
             // 
             // txtAltura
             // 
             this.txtAltura.Location = new System.Drawing.Point(111, 217);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(158, 20);
-            this.txtAltura.TabIndex = 18;
+            this.txtAltura.TabIndex = 7;
             // 
             // btnGuardar
             // 
@@ -184,7 +184,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(194, 260);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -197,7 +197,7 @@
             this.btnBorrar.Location = new System.Drawing.Point(15, 260);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(96, 23);
-            this.btnBorrar.TabIndex = 20;
+            this.btnBorrar.TabIndex = 9;
             this.btnBorrar.Text = "Borrar Registro";
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
@@ -207,7 +207,7 @@
             this.txtTipo2.Location = new System.Drawing.Point(111, 165);
             this.txtTipo2.Name = "txtTipo2";
             this.txtTipo2.Size = new System.Drawing.Size(158, 20);
-            this.txtTipo2.TabIndex = 24;
+            this.txtTipo2.TabIndex = 5;
             // 
             // lblTipo2
             // 

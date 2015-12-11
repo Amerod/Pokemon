@@ -80,7 +80,7 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(85, 13);
             this.lblTitulo.TabIndex = 8;
-            this.lblTitulo.Text = "Pokedex v1.5";
+            this.lblTitulo.Text = "Pokedex v1.6";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // groupBoxLista

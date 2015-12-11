@@ -300,7 +300,7 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(85, 13);
             this.lblTitulo.TabIndex = 10;
-            this.lblTitulo.Text = "Pokedex v1.5";
+            this.lblTitulo.Text = "Pokedex v1.6";
             // 
             // btnSalir
             // 
@@ -332,21 +332,20 @@
             // 
             // lblUsuario
             // 
-            this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
             this.lblUsuario.Location = new System.Drawing.Point(18, 33);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(50, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(75, 13);
             this.lblUsuario.TabIndex = 12;
             this.lblUsuario.Text = "Nombre";
+            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCapturados
             // 
-            this.lblCapturados.AutoSize = true;
             this.lblCapturados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCapturados.ForeColor = System.Drawing.Color.White;
-            this.lblCapturados.Location = new System.Drawing.Point(43, 48);
+            this.lblCapturados.Location = new System.Drawing.Point(49, 48);
             this.lblCapturados.Name = "lblCapturados";
             this.lblCapturados.Size = new System.Drawing.Size(13, 13);
             this.lblCapturados.TabIndex = 13;
@@ -354,10 +353,9 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 48);
+            this.label1.Location = new System.Drawing.Point(24, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 15;
@@ -365,10 +363,9 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(52, 48);
+            this.label2.Location = new System.Drawing.Point(58, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 16;

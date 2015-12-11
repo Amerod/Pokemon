@@ -13,10 +13,8 @@ namespace Pokemon
 {
     public partial class Juego : Form
     {
-        /*
-        SoundPlayer mal;
-        SoundPlayer bien;
-        SoundPlayer aplauso;*/
+        Database db = new Database();
+        String sql;
         PictureBox firstClicked = null;
         int segundos = 0;
         PictureBox secondClicked = null;
@@ -27,27 +25,15 @@ namespace Pokemon
 
         private void AssignIconsToSquares()
         {
-            // The TableLayoutPanel has 24 labels,
-            // and the icon list has 24 icons,
-            // so an icon is pulled at random from the list
-            // and added to each label
-            /*
-            foreach (Control control in tableLayoutPanel1.Controls)
-            {
-                Label iconLabel = control as Label;
-                if (iconLabel != null && iconLabel.Text == "c")
-                {
-                    int randomNumber = random.Next(150);
-                    PictureBox p = new PictureBox();
-                    p.ImageLocation = "images/" + randomNumber + ".jpg";
-                    iconLabel.ForeColor = iconLabel.BackColor;
-                }
-            }*/
             List<int> poke = new List<int>();
-
+            int max = int.Parse(db.consultaStr("SELECT count(*) FROM pokedex","pokedex"));
             for (int i = 0; i < 12; i++)
             {
-                int aleatorio = 1+random.Next(150);
+                int aleatorio = 0;
+                do
+                {
+                    aleatorio = 1 + random.Next(max - 1);
+                } while (poke.Contains(aleatorio));
                 numeros.Add(aleatorio);
                 poke.Add(aleatorio);
                 poke.Add(aleatorio);
@@ -68,12 +54,10 @@ namespace Pokemon
         public Juego(PrincipalJugador p)
         {
             InitializeComponent();
+            db.IniciarConexion("pokedex.accdb");
             AssignIconsToSquares();
             timer2.Start();
             padre = p;
-            //mal = new SoundPlayer("mal.wav");
-            //bien = new SoundPlayer("bien.wav");
-            //aplauso = new SoundPlayer("aplauso.wav");
         }
 
         public void checkForWinner()
@@ -101,7 +85,6 @@ namespace Pokemon
                 }
             }
             timer2.Stop();
-            //aplauso.Play();
             MessageBox.Show("¡Has acabado en " + segundos + " segundos!");
             padre.volver(numeros,int.Parse(tiempo.Text));
             this.Dispose();
@@ -129,12 +112,10 @@ namespace Pokemon
 
                 if (firstClicked.ImageLocation == secondClicked.ImageLocation)
                 {
-                    //bien.Play();
                     firstClicked = null;
                     secondClicked = null;
                     return;
                 }
-                //mal.Play();
                 timer1.Start();
             }
         }

@@ -142,42 +142,42 @@
             this.txtID.Location = new System.Drawing.Point(109, 64);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(146, 20);
-            this.txtID.TabIndex = 20;
+            this.txtID.TabIndex = 1;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(109, 90);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(146, 20);
-            this.txtNombre.TabIndex = 21;
+            this.txtNombre.TabIndex = 2;
             // 
             // txtClase
             // 
             this.txtClase.Location = new System.Drawing.Point(109, 116);
             this.txtClase.Name = "txtClase";
             this.txtClase.Size = new System.Drawing.Size(146, 20);
-            this.txtClase.TabIndex = 22;
+            this.txtClase.TabIndex = 3;
             // 
             // txtTipo
             // 
             this.txtTipo.Location = new System.Drawing.Point(109, 143);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(146, 20);
-            this.txtTipo.TabIndex = 23;
+            this.txtTipo.TabIndex = 4;
             // 
             // txtPeso
             // 
             this.txtPeso.Location = new System.Drawing.Point(109, 195);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(146, 20);
-            this.txtPeso.TabIndex = 24;
+            this.txtPeso.TabIndex = 6;
             // 
             // txtAltura
             // 
             this.txtAltura.Location = new System.Drawing.Point(109, 221);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(146, 20);
-            this.txtAltura.TabIndex = 25;
+            this.txtAltura.TabIndex = 7;
             // 
             // btnGuardar
             // 
@@ -187,7 +187,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(180, 281);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 26;
+            this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -213,7 +213,7 @@
             this.btnImg.Location = new System.Drawing.Point(109, 245);
             this.btnImg.Name = "btnImg";
             this.btnImg.Size = new System.Drawing.Size(146, 23);
-            this.btnImg.TabIndex = 29;
+            this.btnImg.TabIndex = 8;
             this.btnImg.Text = "Abrir archivo...";
             this.btnImg.UseVisualStyleBackColor = false;
             this.btnImg.Click += new System.EventHandler(this.button1_Click);
@@ -223,7 +223,7 @@
             this.txtTipo2.Location = new System.Drawing.Point(109, 169);
             this.txtTipo2.Name = "txtTipo2";
             this.txtTipo2.Size = new System.Drawing.Size(146, 20);
-            this.txtTipo2.TabIndex = 31;
+            this.txtTipo2.TabIndex = 5;
             // 
             // lblTipo2
             // 
