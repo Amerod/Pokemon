@@ -72,7 +72,7 @@ namespace Pokemon
                     sql = "SELECT nombre FROM pokedex WHERE id = "+a+"";
                     string cadena = db.consultaStr(sql,"pokedex")+", ";
                     sql = "SELECT nombre FROM pokedex WHERE id = "+b+"";
-                    cadena += db.consultaStr(sql,"pokedex")+", ";
+                    cadena += db.consultaStr(sql,"pokedex")+" y ";
                     sql = "SELECT nombre FROM pokedex WHERE id = "+c+"";
                     cadena += db.consultaStr(sql,"pokedex");
                     MessageBox.Show("Has capturado a "+cadena);

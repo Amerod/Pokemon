@@ -62,17 +62,6 @@ namespace Pokemon
 
         public void checkForWinner()
         {
-            foreach (Control control in tableLayoutPanel1.Controls)
-            {
-                Label iconLabel = control as Label;
-                if (iconLabel != null)
-                {
-                    if (iconLabel.ForeColor == iconLabel.BackColor)
-                    {
-                        return;
-                    }
-                }
-            }
             foreach (Control item in tableLayoutPanel1.Controls)
             {
                 if (item is PictureBox)
