@@ -14,7 +14,7 @@ namespace Pokemon
     public partial class frmLogin : Form
     {
         Database db = new Database();
-        Registro registro;
+        public Registro registro;
         public static bool ventanaR = false;
         public frmLogin()
         {
@@ -38,14 +38,20 @@ namespace Pokemon
                     Principal principal = new Principal(this);
                     principal.Visible = true;
                     this.Visible = false;
-                    registro.Dispose();
+                    if (registro!=null)
+                    {
+                        registro.Dispose();
+                    }
                 }
                 else
                 {
                     PrincipalJugador principal = new PrincipalJugador(this, txtIDentrenador.Text);
                     principal.Visible = true;
                     this.Visible = false;
-                    registro.Dispose();
+                    if (registro != null)
+                    {
+                        registro.Dispose();
+                    }
                 }
             }
             catch (Exception a)
