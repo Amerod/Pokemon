@@ -25,7 +25,7 @@ namespace Pokemon
         {
             if (txtNombre.Text != "" && txtPass.Text != "")
             {
-                String sql = "Insert into usuarios values('" + txtNombre.Text + "','" + txtPass.Text + "')";
+                String sql = "Insert into usuarios values('" + txtNombre.Text + "','" + txtPass.Text + "',1)";
                 int i = db.ejecutar_slq(sql);
                 if (i > 0)
                 {
